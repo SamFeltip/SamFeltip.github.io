@@ -29,6 +29,7 @@
   <a class="menu-toggle rounded" href="#">
     <i class="fas fa-bars"></i>
   </a>
+  <!-- map-representation clusters-vs-stamps fitting-clusters pattern-sample-relationships assigning-patterns -->
   <nav id="sidebar-wrapper">
     <ul class="sidebar-nav">
       <li class="sidebar-brand">
@@ -41,10 +42,22 @@
         <a class="js-scroll-trigger" href="#about">About</a>
       </li>
       <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#disease-survailance">Disease Survailance</a>
+        <a class="js-scroll-trigger" href="#the-problem">The Problem</a>
       </li>
       <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#symtpom-checker">Symptom Checker</a>
+        <a class="js-scroll-trigger" href="#map-representation">Representing Maps</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#clusters-vs-stamps">Larger Clusters</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#fitting-clusters">Fitting Clusters</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#pattern-sample-relationships">Calculating Pattern-Sample Relationships</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#assigning-patterns">Assigning Samples to Patterns</a>
       </li>
     </ul>
   </nav>
@@ -112,9 +125,9 @@
     </div>
   </section>
 
-  <section  class="py-5 bg-light" id="disease-survailance">
+  <section  class="py-5 bg-light" id="map-representation">
     <div class="text-center">
-      <h2 class="mb-5">Representing the maps</h2>
+      <h2 class="mb-5">Representing Maps</h2>
       <p>I implemented my algorithm on a model solution, and provided it as a function to be implemented into the mapping software by another team member.</p>
       <p class="mb-0">I represented the problem on a smaller, more manipulateable scale.</p>
       <p>This model is built using p5.js</p>
@@ -142,9 +155,9 @@
     </div>
   </section>
 
-  <section  class="py-5 bg-light" id="disease-survailance">
+  <section  class="py-5 bg-light" id="clusters-vs-stamps">
     <div class="text-center">
-      <h2 class="mb-5">Functional Algorithm: Drawing clusters vs stamps</h2>
+      <h2 class="mb-5">Functional Algorithm: Drawing Clusters vs Stamps</h2>
       <p class="mb-0">If a small number of nodes are overlapping, a cluster is drawn in it's place.</p>
       <p>If a eight or more clusters are overlapping, a stamp is drawn in their place.</p>
       <p><b>Grayed samples are included under the pattern nodes to compare the initial vs transformed state</b></p>
@@ -168,7 +181,7 @@
     </div>
   </section>
 
-  <section  class="py-5 bg-light" id="disease-survailance">
+  <section  class="py-5 bg-light" id="fitting-clusters">
     <div class="text-center">
       <h2 class="mb-5">The Algorithm: Fitting Clusters</h2>
       <p class="mb-0">Not only are nodes overlapping, but it is important when the 'pattern' is drawn to replace the sample nodes, it resembles the initial nodes as closely as possible.</p>
@@ -198,11 +211,12 @@
     </div>
   </section>
 
-  <section  class="py-5 bg-light" id="disease-survailance">
+  <section  class="py-5 bg-light" id="pattern-sample-relationships">
     <div class="text-center">
       <h2 class="mb-5">How the algorithm works: Pattern-sample relationships</h2>
-      <p class="mb-0">This algorithm calculates the distance every sample node has in relation to every pattern node. These values give every sample node a level of 'relationship' to each pattern node. the lower the number, the stronger the relationship.</p>
-      <p class="mb-0">the sum of all the sample node relationships gives each sample node an 'eargency rating'. See below</p>
+      <p>This algorithm calculates the distance every sample node has in relation to every pattern node.</p>
+      <p>These values give every sample node a level of 'relationship' to each pattern node. the lower the number, the stronger the relationship.</p>
+      <p>The sum of all the sample node relationships gives each sample node an 'eargency rating'. See below</p>
     </div>
   </section>
   
@@ -234,7 +248,7 @@
     </div>
   </section>
 
-  <section  class="py-5 bg-light" id="symptom-checker">
+  <section  class="py-5 bg-light" id="assigning-patterns">
     <div class="text-center">
       <h2 class="mb-5">How the algorithm works: Using pattern eargency to assign samples to patterns</h2>
       <p>Now we have all the information we need to decide two things:</p>
