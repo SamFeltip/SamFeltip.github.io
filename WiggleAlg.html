@@ -66,7 +66,7 @@
   <header class="content-section bg-primary text-white">
     <div class="container text-center">
       <h2>Wiggle Algorithm</h2>
-      <h3>An automated disease survailance application</h3>
+      <h3>Developing mapping functionality</h3>
     </div>
   </header>
 
@@ -96,15 +96,15 @@
     <div class="container text-center">
       <h2 class="mb-5">Overview</h2>
       <p>I designed an algorithm which would inspect thousands of nodes, find clusters of nodes, and adjust (or wiggle) them into a more suitable place, to make counting easier.</p>
-      <p>If the clusers contained more than 10 nodes, then a stamp would be placed ontop of them showing the number of nodes, rather than a pattern.</p>
+      <p>If the clusers contained more than 10 nodes then a stamp would be placed ontop of them showing the number of nodes, rather than a pattern.</p>
     </div>
   </section>
   <section class="py-5 bg-light" id="the-problem">
     <div class="container text-center">
       <h2 class="mb-5">The problem</h2>
       <p class="my-0">As shown on the three maps below, it is clear you cannot accurately count pins when they are too close together on a map.</p>
-      <p class="my-0">Notice the blue circle on images 2 and 3. in the second image, the modes are so close together.</p>
-      <p class="my-0">Also notice the red circle in images 1 and 2. In the first image, the map is so zoomed out, the 5 pins look like 1.</p>
+      <p class="my-0">Notice the blue circle in images 2 and 3. in the second image, the nodes are too close together.</p>
+      <p class="my-0">Also notice the red circle in images 1 and 2. In the first image the pins are completely overlapping, and look like a single node.</p>
     </div>
   </section>
 
@@ -112,15 +112,15 @@
     <div class="d-flex justify-content-center text-center">
       <div class="col-lg-3">
         <img class="img-fluid mb-4" src="img/Wiggle/ZoomedOut.png" alt="logo image" >
-        <p>Nodes are all multicoloured to represent different types of pin</p>
+        <p>Nodes are all multi-coloured to represent different types of pin</p>
       </div>
       <div class="col-lg-3">
         <img class="img-fluid mb-4" src="img/Wiggle/InitialMap.png" alt="home screen">
-        <p>the nodes are too close together to count accurately</p>
+        <p>The nodes are too close together to count accurately</p>
       </div>
       <div class="col-lg-3">
         <img class="img-fluid mb-4" src="img/Wiggle/ZoomedInMap.png" alt="Virus information scree">
-        <p>Notice the 5 cluser is now countable</p>
+        <p>Nodes are spaced out and can be counted</p>
       </div>
     </div>
   </section>
@@ -129,7 +129,7 @@
     <div class="text-center">
       <h2 class="mb-5">Representing Maps</h2>
       <p>I implemented my algorithm on a model solution, and provided it as a function to be implemented into the mapping software by another team member.</p>
-      <p class="mb-0">I represented the problem on a smaller, more manipulateable scale.</p>
+      <p class="mb-0">I represented the problem on a smaller, more manipulatable scale.</p>
       <p>This model is built using p5.js</p>
     </div>
   </section>
@@ -145,22 +145,15 @@
         <p>A zoomed in representation of the cluster.</p>
       </div>
     </div>
-    <div class="d-flex justify-content-center text-center">
-      <div class="col-lg-4">
-        <p>159 represents the sum of the distances between the pattern nodes and the sample nodes.</p>
-      </div>
-      <div class="col-lg-4">
-        <p>Notice the sum of the distances is much lower (72, rather than 159)</p>
-      </div>
-    </div>
   </section>
 
   <section  class="py-5 bg-light" id="clusters-vs-stamps">
     <div class="text-center">
       <h2 class="mb-5">Final Algorithm: Drawing Clusters vs Stamps</h2>
       <p class="mb-0">Here is an example of the algorithm working.</p>
-      <p class="mb-0">If a small number of nodes are overlapping, a cluster is drawn in it's place.</p>
-      <p>If a eight or more clusters are overlapping, a stamp is drawn in their place.</p>
+      <p class="mb-0">If a small number of nodes are overlapping, a cluster is drawn in its place.</p>
+      <p class="mb-0">If eight or more clusters are overlapping, a stamp is drawn in its place, with a value representing the node count.</p>
+      <p>Ordinary nodes are given ID numbers (1-10)</p>
       <p><b>Grayed samples are included under the pattern nodes to compare the initial vs transformed state</b></p>
     </div>
   </section>
@@ -185,7 +178,7 @@
   <section  class="py-5 bg-light" id="fitting-clusters">
     <div class="text-center">
       <h2 class="mb-5">The Algorithm: Fitting Clusters</h2>
-      <p class="mb-0">Not only are nodes overlapping, but it is important when the 'pattern' is drawn to replace the sample nodes, it resembles the initial nodes as closely as possible.</p>
+      <p>Not onlyshould overlapping nodes be redrawn as clusters, but it is important the clusters represent the initial nodes as accurately as possible.</p>
       <p>Pattern nodes can be rearranged to better fit the sample of map points (we call these sample nodes)</p>
       <p>Each possible rearrangement in the model problem is given a name. Two possible rearrangements here are named 'GPBO' and 'POBG'. Each letter represents a colored pattern node.</p>
     </div>
