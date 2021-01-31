@@ -208,7 +208,7 @@
   <section  class="py-5 bg-light" id="pattern-sample-relationships">
     <div class="text-center">
       <h2 class="mb-5">How the algorithm works: Pattern-sample relationships</h2>
-      <p>This algorithm calculates the distance every sample node has in relation to every pattern node.</p>
+      <p>This algorithm calculates the distance between every sample node and every pattern node.</p>
       <p>These values give every sample node a level of 'relationship' to each pattern node. the lower the number, the stronger the relationship.</p>
       <p>The sum of all the sample node relationships gives each sample node an 'urgency rating'. See below</p>
     </div>
@@ -225,11 +225,11 @@
     <div class="d-flex justify-content-center text-center">
       <div class="col-lg-4">
         <img class="img-fluid mb-4" src="img/Wiggle/AlgorithmExplained/SampleUrgencyBlue.png" alt="home screen">
-        <p>The alpha sample node has the following relationships: ADBC, where A is the closest and C is the furthest.</p>
+        <p>The alpha sample node has the following relationship: ADBC, where A is the closest and C is the furthest.</p>
       </div>
       <div class="col-lg-4">
         <img class="img-fluid mb-4" src="img/Wiggle/AlgorithmExplained/SampleUrgencyOrange.png" alt="Virus information scree">
-        <p>The alpha sample node has the following relationships: CBDA, where C is the closest and A is the furthest.</p>
+        <p>The gamma sample node has the following relationship: CBDA, where C is the closest and A is the furthest.</p>
       </div>
     </div>
     <div class="d-flex justify-content-center text-center">
@@ -244,12 +244,12 @@
 
   <section  class="py-5 bg-light" id="assigning-patterns">
     <div class="text-center">
-      <h2 class="mb-5">How the algorithm works: Using pattern urgency to assign samples to patterns</h2>
-      <p>Now we have all the information we need to decide two things:</p>
-      <p class="mb-0">First, we need to choose a sample to assign to a pattern.</p>
-      <p>Then, we need to decide which pattern to assign this sample too</p>
+      <h2 class="mb-5">How the algorithm works: Using pattern urgency to assign patterns to samples</h2>
+      <p>Now we have all the information, we need to decide two things:</p>
+      <p class="mb-0">First, we need to choose the sample node to next assign to a pattern node.</p>
+      <p>Then, we need to decide which pattern node to assign to this sample node</p>
       <p class="mb-0">We start with the sample with the highest sample urgency. We assign this to the <b>closest available pattern</b></p>
-      <p class="mb-0">This is repeated until all n samples are assigned.</p>
+      <p class="mb-0">This is repeated until all samples have an associated pattern node.</p>
     </div>
   </section>
 
@@ -259,7 +259,7 @@
         <img class="img-fluid mb-4" src="img/Wiggle/AlgorithmExplained/ManualAlg.png" alt="logo image" >
         <p>Bottom: Sample relationship values</p>
         <p>Top leftmost: (weighted) Sample Urgencies</p>
-        <p>Top left: Order we will select samples to assign</p>
+        <p>Top left: sample priority list. This shows which sample will be assigned to a pattern node first</p>
         <p>Top right: Pattern nodes for each sample ordered by strongest relationship.</p>
         <p>Middle right: Pattern assigned to each sample (A -> beta, etc)</p>
         <p><b>Final pattern chosen: GOPB (displayed top left)</b></p>
