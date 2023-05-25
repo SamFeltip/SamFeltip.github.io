@@ -1,0 +1,250 @@
+<html>
+  <head>
+    <title>Sam's Portfolio - PlanetGO</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/planetGO.css" />
+    <link rel="stylesheet" href="./css/developer_view.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/planetGO.js" defer></script>
+  </head>
+
+  <body class="light">
+    <div class="container">
+      <div class="header">
+        <div class="banner">
+          <p class="title align-center">PlanetGO</p>
+          <div class="align-center description">
+            <p>
+              PlanetGO is an event management app built with a team of
+              developers in my 4th year at the University of Sheffield
+            </p>
+          </div>
+        </div>
+        <div class="tags">
+          <div class="tag tag-primary">
+            <p class="tag-text">Ruby on Rails</p>
+          </div>
+          <div class="tag tag-primary">
+            <p class="tag-text">JavaScript</p>
+          </div>
+          <div class="tag tag-primary">
+            <p class="tag-text">RSpec <em>Unit Testing</em></p>
+          </div>
+          <div class="tag tag-primary">
+            <p class="tag-text">Postgres <em>database</em></p>
+          </div>
+
+          
+        </div>
+        <div class="tags tags-primary">
+
+          <div class="tag">
+            <p class="tag-text">GitLab</p>
+          </div>
+          <div class="tag">
+            <p class="tag-text">SCSS</p>
+          </div>
+          <div class="tag">
+            <p class="tag-text">HAML</p>
+          </div>
+          <div class="tag">
+            <p class="tag-text">Agile Development</p>
+          </div>
+          <div class="tag">
+            <p class="tag-text">Figma <em>mockups</em></p>
+          </div>
+        </div>
+        <div class="navigation">
+          <div id="designing" class="button selected">
+            <p class="designing">🎨 designing</p>
+          </div>
+          <div id="developing" class="button">
+            <p class="developing">🧑‍💻 developing</p>
+          </div>
+        </div>
+      </div>
+      <div class="body" id="designer_body">
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/unify-v3-copy.appspot.com/o/9yn8893srlp-7%3A2382?alt=media&token=94251142-2ecb-4fa3-9073-d622aded85a0"
+          alt="Not Found"
+          class="product-banner"
+        />
+        <div class="section">
+          <div class="mockups">
+            <img src="img/planetGO/event_index_page.png" alt="mockup produced in figma of a page showing recommended events on an iphone screen">
+            <img src="img/planetGO/event_show_page.png" alt="mockup produced in figma of a particular event, showing the title, date and description on an iphone screen">
+            <img src="img/planetGO/outing_show_page.png" alt="mocking produced in figma of an outing showing proposed events, participants, and outing details such as the title and description on an iphone screen">
+          </div>
+          
+
+          <div class="footer">
+            <h2>Find the perfect event</h2>
+            <h2>Gather friends for your next trip out</h2>
+            <h2>Organise your outing</h2>
+            <p class="align-center">
+              Find recommended events near you, and events you’ll love based
+              on where you’ve been before
+            </p>
+            <p class="align-center">
+              If an event is right for you, bring your friends along by adding
+              it to an outing
+            </p>
+            <p class="align-center">
+              Create your own outings by collecting events and inviting
+              friends
+            </p>
+          </div>
+        </div>
+        <div class="section-1">
+          <div class="description">
+            <h2>Responsive Design</h2>
+            <p class="align-center">
+              Accessible design on tablets, phones, and desktops
+            </p>
+          </div>
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/unify-v3-copy.appspot.com/o/9yn8893srlp-8%3A2819?alt=media&token=5141a3d5-ceb5-43de-874d-baa54fcbae5b"
+            alt="Not Found"
+            class="show-outing-desktop"
+          />
+        </div>
+      </div>
+    
+      
+      
+
+      
+      <div class="body default_hide" id="developer_body">
+        <div class="subsection align-start">
+          <div class="section-body">
+            <h2>Development process</h2>
+            <p>
+              This project was built with a team of 3 developers over an 8 month
+              period
+            </p>
+            <p>
+              Used <b>Agile Development</b> to ensure features were implemented iteratively and tracked productivity over the project timeline with <b>Kanban</b>.
+            </p>
+            <p>
+              Used <b>GitLab</b> for version control, merge requests and deployment to production.
+            </p>          
+          </div>
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/unify-v3-copy.appspot.com/o/8pxq15dwoih-8%3A2414?alt=media&token=1cd95731-ddd6-4a85-a965-8be7bb585f10"
+            alt="Not Found"
+            class="images"
+          />
+        </div>
+        <div class="section">
+          <div class="subsection">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/unify-v3-copy.appspot.com/o/8pxq15dwoih-8%3A2439?alt=media&token=1b26801e-5805-4629-bc40-371b6852ead7"
+              alt="Not Found"
+              class="image"
+            />
+            <div class="section-body">
+              <h2>Feature Testing</h2>
+              <p>
+                Test driven development with <b>RSpec</b> ensured the application was
+                well tested and reliable
+              </p>
+              <ul>
+                <li><b>85.69%</b> code coverage</li>
+                <li><b>50.6</b> hits/line 2:1 Test to Code ratio</li>
+              </p>
+            </div>
+          </div>
+          <div class="subsection">
+            <div class="section-body">
+              <h2>Performance Testing</h2>
+              <p>
+                Google Lighthouse ensured excellent accessibility, performance,
+                and use of best practise
+              </p>
+
+              <div class="lighthouse-description">
+                <div class="lighthouse-rings">
+                  <div class="col">
+                    <div class="lighthouse-report">
+                      <p class="lighthouse-orb">99</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="lighthouse-report">
+                      <p class="lighthouse-orb">96.4</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="lighthouse-report">
+                      <p class="lighthouse-orb">96</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="lighthouse-titles">
+                  <div class="col">
+                    <p>Avg Performance</p>
+                  </div>
+                  <div class="col">
+                    <p>Avg Accessibility</p>
+                  </div>
+                  <div class="col">
+                    <p>Avg Best Practices</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/unify-v3-copy.appspot.com/o/8pxq15dwoih-8%3A2441?alt=media&token=80b02722-1ff8-49b5-bd2a-87094f050c14"
+              alt="Not Found"
+              class="image"
+            />
+          </div>
+        </div>
+        <div class="section">
+          <div class="subsection">
+            <div class="section-body">
+              <h2>Application Security</h2>
+              <p class="body-6">
+                <b>Brakeman</b> used to ensure best practises are in place to <b>prevent XSS
+                vulnerabilities, SQL Injection, SRF vulnerabilities</b>, and more
+                potential vulnerabilities
+              </p>
+              <p>Passed with zero errors and zero warnings</p>
+            </div>
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/unify-v3-copy.appspot.com/o/8pxq15dwoih-8%3A2516?alt=media&token=f37b1eb3-3c6f-40f1-af0a-5490d0f8352d"
+              alt="Not Found"
+              class="image"
+            />
+          </div>
+          <div class="subsection">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/unify-v3-copy.appspot.com/o/8pxq15dwoih-8%3A2538?alt=media&token=56ac091c-d07a-468a-b2c0-a46f74b86be1"
+              alt="Not Found"
+              class="image"
+            />
+            <div class="section-body">
+              <h2>Dependency Security</h2>
+              <p >
+                <b>Bundler Audit</b> ensured all packages and external libraries were
+                kept up to date and versions with known vulnerabilities were not
+                used
+              </p>
+              <p>Passed with zero errors and zero warnings</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+
+
+
+
+
+    </div>
+  </body>
+
+</html>

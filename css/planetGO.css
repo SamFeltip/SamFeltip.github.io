@@ -1,0 +1,303 @@
+/* Planetgo portfolio designing */
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair Display:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open Sans:wght@400;700&display=swap");
+
+* {
+  transition: 0.1s ease;
+}
+
+p {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.light {
+  background-color: rgba(252, 241, 227, 1);
+  color: black;
+}
+
+.dark {
+  background-color: #232323;
+  color: white;
+}
+
+.header {
+  align-items: flex-start;
+  gap: 1px;
+  /* width: fit-content; */
+  box-sizing: border-box;
+}
+
+.banner {
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 174px;
+  box-sizing: border-box;
+}
+.title {
+  font-size: 32px;
+  line-height: 32px;
+  font-family: Playfair Display, serif;
+  font-weight: 700;
+}
+
+.description {
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  padding: 30px 75px 7px;
+  box-sizing: border-box;
+}
+
+p, ul{
+  font-size: 16px;
+  font-family: Open Sans, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.48px;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 100px;
+  /* width: 948px; */
+  box-sizing: border-box;
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  margin-bottom: 10px;
+
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tag {
+  align-items: flex-start;
+  gap: 10px;
+  padding: 7px 16px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: rgba(130, 130, 130, 1);
+}
+
+.tags-primary .tag {
+  background-color: rgba(55, 119, 255, 1);
+}
+
+.tag-text {
+  color: rgba(255, 255, 255, 1);
+  font-size: 16px;
+  line-height: 16px;
+  font-family: Open Sans, sans-serif;
+  font-weight: 700;
+}
+
+em {
+  font-style: normal;
+  font-weight: 500;
+}
+
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  padding: 50px 20px;
+  box-sizing: border-box;
+
+}
+
+.navigation .button:first-child{
+  border-radius: 10px 0 0 10px;
+}
+
+.navigation .button:last-child{
+  border-radius: 0 10px 10px 0;
+}
+
+
+
+.designing {
+  font-size: 16px;
+  line-height: 16px;
+  font-family: Open Sans, sans-serif;
+  font-weight: 700;
+}
+
+.button {
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  padding: 10px 50px;
+  box-sizing: border-box;
+  color: black;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.selected {
+  background-color: rgba(55, 119, 255, 1);
+  color: white;
+
+}
+
+.developing {
+  font-size: 16px;
+  line-height: 16px;
+  font-family: Open Sans, sans-serif;
+  font-weight: 700;
+}
+
+.product-banner {
+  width: 100%;
+  /* width: 948px;
+  height: 140px; */
+}
+
+.section-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.mockups {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  /* row-gap: 20px; */
+  column-gap: 25px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.mockups img {
+  width: inherit;
+  max-width: 160px;
+}
+
+.footer {
+  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* row-gap: 20px; */
+  column-gap: 25px;
+
+  /* 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box; */
+}
+
+.title-list {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  /* 
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box; */
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 24px;
+  font-family: Open Sans, sans-serif;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: -0.72px;
+  margin-bottom: 20px;
+}
+
+.descriptions {
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.description {
+
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  box-sizing: border-box;
+}
+
+.show-outing-desktop {
+  width: 500px;
+  height: 100%;
+}
+
+
+.container {
+  margin-top: 40px;
+  width: 800px;
+}
+
+.default_hide {
+  display: none;
+}
+
+
+@media (max-width: 800px) {
+  .container {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+/* ************* dev page *************** */
+
+
+
+
+
+
+
