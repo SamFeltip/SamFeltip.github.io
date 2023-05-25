@@ -2,6 +2,7 @@
   <head>
     <title>Sam's Portfolio - PlanetGO</title>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/planetGO.css" />
     <link rel="stylesheet" href="./css/developer_view.css">
@@ -13,7 +14,7 @@
     <div class="container">
       <div class="header">
         <div class="banner">
-          <p class="title align-center">PlanetGO</p>
+          <h1 class="align-center">PlanetGO</p>
           <div class="align-center description">
             <p>
               PlanetGO is an event management app built with a team of
@@ -21,23 +22,23 @@
             </p>
           </div>
         </div>
-        <div class="tags">
-          <div class="tag tag-primary">
+        <div class="tags tags-primary">
+          <div class="tag">
             <p class="tag-text">Ruby on Rails</p>
           </div>
-          <div class="tag tag-primary">
+          <div class="tag">
             <p class="tag-text">JavaScript</p>
           </div>
-          <div class="tag tag-primary">
+          <div class="tag">
             <p class="tag-text">RSpec <em>Unit Testing</em></p>
           </div>
-          <div class="tag tag-primary">
+          <div class="tag">
             <p class="tag-text">Postgres <em>database</em></p>
           </div>
 
           
         </div>
-        <div class="tags tags-primary">
+        <div class="tags">
 
           <div class="tag">
             <p class="tag-text">GitLab</p>
@@ -55,6 +56,7 @@
             <p class="tag-text">Figma <em>mockups</em></p>
           </div>
         </div>
+
         <div class="navigation">
           <div id="designing" class="button selected">
             <p class="designing">🎨 designing</p>
@@ -64,7 +66,8 @@
           </div>
         </div>
       </div>
-      <div class="body" id="designer_body">
+
+      <main id="designer_body">
         <img
           src="https://firebasestorage.googleapis.com/v0/b/unify-v3-copy.appspot.com/o/9yn8893srlp-7%3A2382?alt=media&token=94251142-2ecb-4fa3-9073-d622aded85a0"
           alt="Not Found"
@@ -96,8 +99,8 @@
             </p>
           </div>
         </div>
-        <div class="section-1">
-          <div class="description">
+        <div class="subsection align-start">
+          <div class="subsection-body">
             <h2>Responsive Design</h2>
             <p class="align-center">
               Accessible design on tablets, phones, and desktops
@@ -109,15 +112,15 @@
             class="show-outing-desktop"
           />
         </div>
-      </div>
+      </main>
     
       
       
 
       
-      <div class="body default_hide" id="developer_body">
+      <main class="default_hide" id="developer_body">
         <div class="subsection align-start">
-          <div class="section-body">
+          <div class="subsection-body">
             <h2>Development process</h2>
             <p>
               This project was built with a team of 3 developers over an 8 month
@@ -143,7 +146,7 @@
               alt="Not Found"
               class="image"
             />
-            <div class="section-body">
+            <div class="subsection-body">
               <h2>Feature Testing</h2>
               <p>
                 Test driven development with <b>RSpec</b> ensured the application was
@@ -156,7 +159,7 @@
             </div>
           </div>
           <div class="subsection">
-            <div class="section-body">
+            <div class="subsection-body">
               <h2>Performance Testing</h2>
               <p>
                 Google Lighthouse ensured excellent accessibility, performance,
@@ -204,7 +207,7 @@
         </div>
         <div class="section">
           <div class="subsection">
-            <div class="section-body">
+            <div class="subsection-body">
               <h2>Application Security</h2>
               <p class="body-6">
                 <b>Brakeman</b> used to ensure best practises are in place to <b>prevent XSS
@@ -225,7 +228,7 @@
               alt="Not Found"
               class="image"
             />
-            <div class="section-body">
+            <div class="subsection-body">
               <h2>Dependency Security</h2>
               <p >
                 <b>Bundler Audit</b> ensured all packages and external libraries were
@@ -236,7 +239,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </main>
       
 
 

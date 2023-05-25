@@ -3,18 +3,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair Display:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open Sans:wght@400;700&display=swap");
 
-* {
-  transition: 0.1s ease;
-}
-
 p {
   margin: 0;
+  
+}
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 100px;
+  box-sizing: border-box;
 }
 
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+
+.container {
+  margin-top: 40px;
+  width: 800px;
+}
+
+.default_hide {
+  display: none;
 }
 
 .light {
@@ -27,6 +44,10 @@ body {
   color: white;
 }
 
+.dark p, .dark h1 {
+  font-family: Source Code Pro, serif;
+}
+
 .header {
   align-items: flex-start;
   gap: 1px;
@@ -34,14 +55,8 @@ body {
   box-sizing: border-box;
 }
 
-.banner {
-  align-items: center;
-  gap: 10px;
-  width: 100%;
-  height: 174px;
-  box-sizing: border-box;
-}
-.title {
+
+h1 {
   font-size: 32px;
   line-height: 32px;
   font-family: Playfair Display, serif;
@@ -56,6 +71,21 @@ body {
   box-sizing: border-box;
 }
 
+
+.banner {
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.product-banner {
+  width: 100%;
+  /* width: 948px;
+  height: 140px; */
+}
+
+
 p, ul{
   font-size: 16px;
   font-family: Open Sans, sans-serif;
@@ -67,15 +97,6 @@ p, ul{
   text-align: center;
 }
 
-.body {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 100px;
-  /* width: 948px; */
-  box-sizing: border-box;
-}
 
 .tags {
   display: flex;
@@ -91,6 +112,7 @@ p, ul{
   box-sizing: border-box;
   
 }
+
 .row {
   display: flex;
   flex-direction: row;
@@ -100,6 +122,22 @@ p, ul{
   width: 100%;
   box-sizing: border-box;
 }
+
+.col {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
 
 .tag {
   align-items: flex-start;
@@ -112,6 +150,10 @@ p, ul{
 
 .tags-primary .tag {
   background-color: rgba(55, 119, 255, 1);
+}
+
+.dark .tags-primary .tag{
+  background-color: #FF7337;
 }
 
 .tag-text {
@@ -167,12 +209,17 @@ em {
   box-sizing: border-box;
   color: black;
   background-color: rgba(255, 255, 255, 1);
+
+  cursor: pointer;
 }
 
 .selected {
   background-color: rgba(55, 119, 255, 1);
   color: white;
+}
 
+.dark .selected {
+  background-color: #FF7337;
 }
 
 .developing {
@@ -182,22 +229,30 @@ em {
   font-weight: 700;
 }
 
-.product-banner {
-  width: 100%;
-  /* width: 948px;
-  height: 140px; */
+
+.section {
+  display: flex;
+  flex-direction: column;
 }
 
-.section-1 {
+.subsection-body {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  
   gap: 10px;
   width: 100%;
   box-sizing: border-box;
-  overflow: hidden;
 }
+
+.subsection {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
 
 .mockups {
   display: grid;
@@ -212,6 +267,13 @@ em {
 .mockups img {
   width: inherit;
   max-width: 160px;
+}
+
+
+.image {
+  gap: 10px;
+  width: 250px;
+  height: 250px;
 }
 
 .footer {
@@ -271,14 +333,69 @@ h2 {
 }
 
 
-.container {
-  margin-top: 40px;
-  width: 800px;
+
+
+.lighthouse-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.default_hide {
-  display: none;
+.lighthouse-rings {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 10px 0;
 }
+
+
+
+
+.lighthouse-report {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+  width: 100px;
+  height: 100px;
+
+  border: 5px solid rgba(89, 194, 109, 1);
+  border-radius: 100px;
+  box-sizing: border-box;
+  background-color: rgba(31, 46, 38, 1);
+}
+
+
+.lighthouse-orb {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(89, 194, 109, 1);
+  font-size: 35px;
+  line-height: 35px;
+  font-family: Ubuntu, sans-serif;
+  font-weight: 500;
+  text-align: center;
+
+}
+
+.lighthouse-titles {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 
 
 @media (max-width: 800px) {
