@@ -1,0 +1,21 @@
+<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1_226)">
+<rect width="240" height="240" fill="white"/>
+<line x1="-9.29289" y1="189.293" x2="61.4178" y2="260.004" stroke="#D7EDEE" stroke-width="2" stroke-dasharray="10 5 25 5"/>
+<line x1="-8.23223" y1="148.232" x2="86.7678" y2="243.232" stroke="#D7EDEE" stroke-width="5" stroke-dasharray="10 5 25 5"/>
+<line x1="-9.29289" y1="109.293" x2="120.707" y2="239.293" stroke="#D7EDEE" stroke-width="2" stroke-dasharray="10 5 25 5"/>
+<line x1="-8.23223" y1="68.2322" x2="161.768" y2="238.232" stroke="#D7EDEE" stroke-width="5" stroke-dasharray="10 5 25 5"/>
+<line x1="-9.29289" y1="29.2929" x2="200.707" y2="239.293" stroke="#D7EDEE" stroke-width="2" stroke-dasharray="10 5 25 5"/>
+<line x1="1.76777" y1="-1.76777" x2="241.768" y2="238.232" stroke="#D7EDEE" stroke-width="5" stroke-dasharray="10 5 25 5"/>
+<line x1="40.7071" y1="-0.707107" x2="240.707" y2="199.293" stroke="#D7EDEE" stroke-width="2" stroke-dasharray="10 5 25 5"/>
+<line x1="81.7678" y1="-1.76777" x2="241.768" y2="158.232" stroke="#D7EDEE" stroke-width="5" stroke-dasharray="10 5 25 5"/>
+<line x1="120.707" y1="-0.707107" x2="240.707" y2="119.293" stroke="#D7EDEE" stroke-width="2" stroke-dasharray="10 5 25 5"/>
+<line x1="161.768" y1="-1.76777" x2="241.768" y2="78.2322" stroke="#D7EDEE" stroke-width="5" stroke-dasharray="10 5 25 5"/>
+<line x1="200.707" y1="-0.707107" x2="240.707" y2="39.2929" stroke="#D7EDEE" stroke-width="2" stroke-dasharray="10 5 25 5"/>
+</g>
+<defs>
+<clipPath id="clip0_1_226">
+<rect width="240" height="240" fill="white"/>
+</clipPath>
+</defs>
+</svg>
