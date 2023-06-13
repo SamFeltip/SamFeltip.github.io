@@ -31,6 +31,8 @@
   padding: 0 50px;
 }
 
+
+
 body {
   margin: 0;
   background: url(/img/home/background_image.svg);
@@ -54,6 +56,7 @@ nav {
   z-index: 2;
 }
 
+/* consider links with icons: icons must be centered */
 a:has(svg){
   display: flex;
   align-items: center;
@@ -111,6 +114,7 @@ main {
   max-width: 1000px;
 }
 
+
 .mockup_list {
   display: flex;
   justify-content: center;
@@ -122,13 +126,15 @@ main {
   width: 33%;
 }
 
-
+h2 {
+  color: #F00;
+}
 
 .card {
 
   display: flex;
   flex-direction: row;
-  gap: 15px;
+  gap: 50px;
 
   justify-content: center;
   align-items: center;
