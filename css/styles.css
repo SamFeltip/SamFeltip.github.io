@@ -29,6 +29,9 @@ a:has(svg){
   gap: 5px;
 }
 
+svg {
+  fill: currentcolor
+}
 
 a {
   text-decoration: none;
@@ -139,15 +142,17 @@ h2 {
   box-shadow: 0px 15px 0px #A930D3;
 }
 
-#card-header a {
+#card-header .button {
   background-color: #f00;
   color: white;
   padding: 5px 20px;
   border-radius: 10px;
+  margin-bottom: 1rem;
 }
 
 #card-header em {
   color: #f00;
+  text-align: center;
 }
 
 #card-about img {

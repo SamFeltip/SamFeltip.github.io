@@ -29,3 +29,13 @@
 .px-50 {
   padding: 0 50px;
 }
+
+.d-inline{
+  display: inline;
+}
+
+@media (min-width: 700px) {
+  .d-md-none {
+    display: none;
+  }
+}
