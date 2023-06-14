@@ -1,0 +1,90 @@
+:root {
+  --navbar-height : 4.2em;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+
+  background-color: black;
+  color: white;
+  
+  width: 100%;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 1.1rem;
+
+  /* appear above the mockups positioned as relative */
+  z-index: 2;
+
+}
+
+nav ul {
+  margin: 0;
+}
+
+#nav-header {
+  height: var(--navbar-height);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 1rem ;
+  align-items: center;
+}
+
+nav.hidden #nav-content {
+  visibility: hidden;
+  height: 0;
+  transition: 0.2s ease;
+}
+
+#nav-content {
+  visibility: visible;
+  height: 8rem;
+  transition: 0.2s ease;
+
+  list-style-type: none;
+}
+
+#nav-content li {
+  margin-bottom: 1rem;
+}
+
+#nav-button:hover{
+  cursor: pointer;
+}
+
+main {
+  padding-top: calc(var(--navbar-height) + 2rem);
+}
+
+@media (min-width: 700px) {
+
+  #nav-button {
+    display: none;
+  }
+
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #nav-content {
+    visibility: visible !important;
+    height: inherit !important;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+  }
+
+  #nav-content li {
+    margin-bottom: 0;
+    margin-right: 1.5em;
+  }
+  
+}
