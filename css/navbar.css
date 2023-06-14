@@ -1,5 +1,5 @@
 :root {
-  --navbar-height : 4.2em;
+  --navbar-height : 3em;
 }
 
 nav {
@@ -14,7 +14,7 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  font-size: 1.1rem;
+  font-size: 1.7rem;
 
   /* appear above the mockups positioned as relative */
   z-index: 2;
@@ -38,13 +38,13 @@ nav ul {
 nav.hidden #nav-content {
   visibility: hidden;
   height: 0;
-  transition: 0.2s ease;
+  transition: height 0.2s ease;
 }
 
 #nav-content {
   visibility: visible;
-  height: 8rem;
-  transition: 0.2s ease;
+  height: 12rem;
+  transition: height 0.2s ease;
 
   list-style-type: none;
 }
@@ -70,6 +70,8 @@ main {
   nav {
     flex-direction: row;
     justify-content: space-between;
+
+    font-size: 1.2rem;
   }
 
   #nav-content {
