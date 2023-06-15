@@ -78,7 +78,7 @@ h2 {
   display: flex;
   flex-direction: column;
   text-align: center;
-
+  overflow: hidden;
 
   justify-content: center;
   align-items: center;
@@ -93,9 +93,8 @@ h2 {
 }
 
 .card img {
-  /* max-width: 200px;
-  max-height: 200px; */
   width: 100%;
+  max-width: 420px;
   height: 400px;
   object-fit: cover;
 }
@@ -213,8 +212,7 @@ footer a{
   }
   
   .card img {
-    width: 100%;
-    min-width: 20rem;
+    width: 20rem;
   }
 
   /* mockup images are treated differently */

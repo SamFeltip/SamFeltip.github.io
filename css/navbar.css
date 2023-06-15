@@ -1,5 +1,6 @@
 :root {
-  --navbar-height : 3em;
+  --navbar-height : 5rem;
+  --nav-content-height: 12rem;
 }
 
 nav {
@@ -28,28 +29,38 @@ nav ul {
 #nav-header {
   height: var(--navbar-height);
 
+  background-color: black;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 0 1rem ;
   align-items: center;
+
+  position: relative;
+  z-index: 4;
+
 }
 
 nav.hidden #nav-content {
-  visibility: hidden;
+  /* move the navbar content up and shrink to invisible */
+  transform: translateY(calc(-1 * var(--nav-content-height)));
   height: 0;
-  transition: height 0.2s ease;
+  transition: 0.2s ease;
 }
+
 
 #nav-content {
-  visibility: visible;
-  height: 12rem;
-  transition: height 0.2s ease;
+  height: var(--nav-content-height);
+  transition: 0.2s ease;
 
   list-style-type: none;
+
+  position: relative;
+  z-index: 3;
 }
 
-#nav-content li {
+#nav-content * {
   margin-bottom: 1rem;
 }
 
@@ -75,18 +86,18 @@ main {
   }
 
   #nav-content {
-    visibility: visible !important;
     height: inherit !important;
+    transform: none !important;
 
     display: flex;
     flex-direction: row;
     align-items: center;
 
-  }
+  } 
 
-  #nav-content li {
+  #nav-content * {
     margin-bottom: 0;
-    margin-right: 1.5em;
+    margin-right: 1.5rem;
   }
   
 }
