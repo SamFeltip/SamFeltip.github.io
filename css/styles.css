@@ -57,16 +57,18 @@ main {
 }
 
 
-.mockup_list {
+.mockup-list {
   display: flex;
   justify-content: center;
   flex-direction: row;
   overflow: hidden;
 }
 
-.mockup_list img {
+.mockup-list img {
   flex: 1;
-  width: 33%;
+  width: 33% !important;
+  height: auto !important;
+  max-width: 200px;
 }
 
 h2 {
@@ -92,7 +94,7 @@ h2 {
 
 }
 
-.card img {
+.card .card-img {
   width: 100%;
   max-width: 420px;
   height: 400px;
@@ -211,16 +213,17 @@ footer a{
 
   }
   
-  .card img {
+  .card .card-img {
     width: 20rem;
   }
 
   /* mockup images are treated differently */
-  .stacked-images img, .mockup_list img {
+  .stacked-images img{
     max-height: 400px;
     width: auto;
     min-width: 0;
   }
+
 
   #card-header {
     box-shadow: 15px 15px 0px #f00;
