@@ -6,49 +6,140 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- google font -->
-  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,700;1,200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
 
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/inline-styles.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/inline-styles.css">
+  <link rel="stylesheet" href="../css/styles.css">
   
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/tools-list.css">
+
+  <script src="../js/navbar.js" defer></script>
+
   
-  <link rel="stylesheet" href="css/navbar.css">
-  <script src="js/navbar.js" defer></script>
-  <title>Sam Felton Portfolio</title>
+  <title>Sam Felton Portfolio - projects</title>
 
 </head>
 
 <body>
   <nav class="hidden">
     <div id="nav-header" class="">
-      <header>
+      <h1>
         <a href="/index.html">
           Sam Felton
         </a>
-      </header>
+      </h1>
+
       <a id="nav-button">
         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1.5em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M61.1 224C45 224 32 211 32 194.9c0-1.9 .2-3.7 .6-5.6C37.9 168.3 78.8 32 256 32s218.1 136.3 223.4 157.3c.5 1.9 .6 3.7 .6 5.6c0 16.1-13 29.1-29.1 29.1H61.1zM144 128a16 16 0 1 0 -32 0 16 16 0 1 0 32 0zm240 16a16 16 0 1 0 0-32 16 16 0 1 0 0 32zM272 96a16 16 0 1 0 -32 0 16 16 0 1 0 32 0zM16 304c0-26.5 21.5-48 48-48H448c26.5 0 48 21.5 48 48s-21.5 48-48 48H64c-26.5 0-48-21.5-48-48zm16 96c0-8.8 7.2-16 16-16H464c8.8 0 16 7.2 16 16v16c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V400z"/></svg>
       </a>
     </div>
 
     <ul id="nav-content">
-      <li><a href="/about.html">about me</a></li>
-      <li><a href="/projects.html">my projects</a></li>
+      <li><a href="/pages/about.html">about me</a></li>
+      <li><a href="/pages/projects.html">my projects</a></li>
       <li><a href="#contacts">contact me</a></li>
     </ul>
 
   </nav>
+
+
+  <header>
+    <h1>
+      Projects
+    </h1>
+    <p>
+      Here's a few projects I've worked on recently
+    </p>
+  </header>
+
   <main>
-    <div class="body">
-      <div class="card">
-        <div class="card-body">
-          <h1>Coming soon!</h1>
-          <p>Stay tuned to see more</p>
+
+    <section>
+      <img src="../img/PROMPT/PROMPT_logo.png" alt="PROMPT logo" width="250">
+      <div class="section-body">
+        <h3>2021 - 2023</h3>
+        <p><b>PROMPT</b> is a Postgraduate report management system, built for the University of Sheffield. It assists postgraduate students and staff collaborate on forms.</p>
+        <div class="tools-list">
+          <img src="../img/tool-logos/RubyOnRails.png" alt="Ruby on Rails logo">
+          <img src="../img/tool-logos/Ruby.png" alt="Ruby logo">
+          <img src="../img/tool-logos/PostgreSQL.png" alt="PostgreSQL logo">
+          <img src="../img/tool-logos/Moqups.png" alt="Moqups logo">
+
         </div>
+
+        <a href="/pages/projects/prompt.html">
+          <p>
+            Learn more
+          </p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+          </svg>
+        </a>
+
       </div>
-    </div>
+    </section>
+
+    <section>
+      <img class="banner" src="../img/planetGO/Banner.svg" alt="planetGO logo" width="500px">
+      <div class="section-body">
+        <h3>2022 - 2023</h3>
+        <p><b>PlanetGO</b> is a Ruby on Rails project built during my forth year of my MCOMP Computer Science degree. Users can plan and join outings, and invite friends to come along too.</p>
+        <div class="tools-list"><img src="../img/tool-logos/RubyOnRails.png" alt="Ruby on Rails logo">
+          <img src="../img/tool-logos/Ruby.png" alt="Ruby logo">
+          <img src="../img/tool-logos/PostgreSQL.png" alt="PostgreSQL logo">
+          <img src="../img/tool-logos/Figma.png" alt="Figma logo">
+        </div>
+        
+        <a href="/pages/projects/planetGO.html">
+          <p>
+            Learn more
+          </p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+          </svg>
+        </a>
+
+      </div>
+    </section>
+
+    <section>
+      <img class="banner" src="../img/ThisOrThat/logo-banner.png" alt="ThisOrThat logo" width="500">
+      <div class="section-body">
+        <h3>2023</h3>
+        <p><b>ThisOrThat</b> is an independent project I built to learn React. It is a ranking website where you can upload lists of items, and users can vote on their favourite to pick a winner.</p>
+        <div class="tools-list">
+          <img src="../img/tool-logos/React.png" alt="React logo">
+          <img src="../img/tool-logos/JavaScript.png" alt="JavaScript logo">
+          <img src="../img/tool-logos/NodeJS.png" alt="NodeJS logo">
+          <img src="../img/tool-logos/Figma.png" alt="Figma logo">
+        </div>
+
+        <a href="/pages/projects/thisorthat.html">
+          <p>
+            Learn more
+          </p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+          </svg>
+        </a>
+
+      </div>
+    </section>
+
+
+
+    <section>
+      <h1>
+        Wiggle Algorithm
+      </h1>
+      <p>
+
+      </p>
+    </section>
 
   </main>
 
@@ -57,7 +148,7 @@
       Get in touch!
     </h1>
     <div class="contact-options">
-      
+
       <a href="https://www.linkedin.com/in/samfelton/">
         <svg xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
         <p>LinkedIn</p>
@@ -80,9 +171,8 @@
           GitHub
         </p>
       </a>
-    </table>
+    </div>
   </footer>
-
 </body>
 
 </html> 

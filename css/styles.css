@@ -2,19 +2,14 @@
   --stacked-image-padding: 50px;
 }
 
-@font-face {
-  font-family: ayuthaya;
-  src: url(Ayuthaya.ttf);
-}
 
-* {
-  font-family: ayuthaya, 'Source Code Pro', monospace;
+
+h1, h2, h3, p, li, .button {
+  font-family: 'Montserrat', sans-serif;
 }
 
 
 body {
-
-  background: url(/img/home/background_image.svg);
   
   /* this is added for the footer */
   min-height: 100vh;
@@ -26,7 +21,8 @@ body {
 a:has(svg){
   display: flex;
   align-items: center;
-  gap: 5px;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 svg {
@@ -46,16 +42,33 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-bottom: 2rem;
+
+  padding-top: 2rem;
 }
 
-.body {
+.content {
   display: flex;
   flex-direction: column;
-  gap: 50px;
   max-width: 1000px;
 }
 
+/* style every other card */
+.card:nth-child(2n), section:nth-child(2n){
+  background-color: #D7EDEE;
+}
+
+section {
+  text-align: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+section .banner{
+  border-radius: 20px;
+  width: 100%;
+  max-width: 700px;
+}
 
 .mockup-list {
   display: flex;
@@ -75,6 +88,10 @@ h2 {
   color: #F00;
 }
 
+h3 {
+  font-weight: 300;
+}
+
 .card {
 
   display: flex;
@@ -86,7 +103,6 @@ h2 {
   align-items: center;
 
   padding: 50px 20px;
-
 
   background: white;
   border: none;
@@ -101,7 +117,9 @@ h2 {
   object-fit: cover;
 }
 
-
+.card h1, .card h2 {
+  font-weight: 300;
+}
 
 .stacked-images {
   position: relative;
@@ -131,16 +149,16 @@ h2 {
 
 
 #card-header {
-  box-shadow: 0px 15px 0px #f00;
+  box-shadow: 0 15px 0 #f00;
 }
 
 #card-about {
   flex-direction: column;
-  box-shadow: 0px 15px 0px #D38530;
+  box-shadow: 0 15px 0 #D38530;
 }
 
 #card-projects {
-  box-shadow: 0px 15px 0px #A930D3;
+  box-shadow: 0 15px 0 #A930D3;
 }
 
 #card-header .button {
@@ -170,6 +188,11 @@ h2 {
 
 }
 
+section a {
+  color: #00767D;
+  font-weight: 300;
+}
+
 footer {
   padding: 20px;
   background-color: #D7EDEE;
@@ -189,6 +212,7 @@ footer a{
   flex-direction: column;
 }
 
+/* medium screens */
 @media (min-width: 700px) {
 
 
@@ -196,14 +220,28 @@ footer a{
     --stacked-image-padding: 70px;
   }
 
+  main {
+    padding-bottom: 2rem;
+  }
+
+  body:has(.card) {
+    background: url(/img/home/background_image.svg);
+  }
+
+  .content:has(.card) {
+    gap: 50px;
+  }
+
+
+
   .card {
+    /* overwrite every other colour changing */
+    background-color: white !important;
+
     flex-direction: row;
     text-align: left;
-
     gap: 2rem;
-
-
-    margin: 1rem 3rem;
+    margin: 0 3rem 2rem 3rem;
 
     /* padding: 0 10px; */
 
@@ -226,17 +264,17 @@ footer a{
 
 
   #card-header {
-    box-shadow: 15px 15px 0px #f00;
+    box-shadow: 15px 15px 0 #f00;
   }
   
   #card-projects {
-    box-shadow: 15px 15px 0px #A930D3;
+    box-shadow: 15px 15px 0 #A930D3;
   }
   
   #card-about {
     flex-direction: row-reverse;
 
-    box-shadow: 15px 15px 0px #D38530;
+    box-shadow: 15px 15px 0 #D38530;
 
   }
 
