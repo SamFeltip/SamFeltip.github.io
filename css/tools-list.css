@@ -1,0 +1,16 @@
+.tools-list {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.tools-list img {
+  height: 30px;
+}
+
+@media (min-width: 700px) {
+  .tools-list img {
+    height: 50px;
+  }
+  
+}
