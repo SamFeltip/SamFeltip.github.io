@@ -1,0 +1,54 @@
+
+.tags {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-bottom: 10px;
+
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+
+.tag {
+    align-items: flex-start;
+    gap: 10px;
+    padding: 7px 16px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: rgba(130, 130, 130, 1);
+}
+
+.tags-primary, .tags-secondary {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap
+}
+
+.tags-primary .tag {
+    background-color: rgba(55, 119, 255, 1);
+}
+
+.dark .tags-primary .tag{
+    background-color: #FF7337;
+}
+
+.tag-text {
+    color: white;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 700;
+}
+
+.tags em {
+    font-style: normal;
+    font-weight: 500;
+}
+

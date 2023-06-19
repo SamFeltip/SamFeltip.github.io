@@ -1,0 +1,46 @@
+/* give a variable to each element which is an nth-child*/
+
+.carousel img, .carousel .carousel-description {
+    display: none
+}
+
+/*overwrite hidden according to the css variable*/
+.carousel .display{
+    display: block;
+}
+
+.carousel .images {
+    width: 260px;
+}
+
+.carousel-picker {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 1.5em;
+}
+
+.carousel-picker .carousel-bullet {
+    width: 5px;
+    height: 5px;
+
+    border: 1px black solid;
+    border-radius: 100px;
+}
+
+.carousel-picker .carousel-bullet.filled {
+    background-color: black;
+}
+
+
+.carousel-picker .next-option:hover, .carousel-picker .prev-option:hover {
+    height: 1.7em
+}
+
+.carousel-picker .prev-option, .carousel-picker .next-option {
+    transition: height 0.5s ease;
+    padding: 10px;
+}
+

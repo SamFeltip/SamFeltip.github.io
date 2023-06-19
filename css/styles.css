@@ -8,6 +8,9 @@ h1, h2, h3, p, li, .button {
   font-family: 'Montserrat', sans-serif;
 }
 
+img {
+  max-width: 100%;
+}
 
 body {
   
@@ -55,6 +58,10 @@ main {
 /* style every other card */
 .card:nth-child(2n), section:nth-child(2n){
   background-color: #D7EDEE;
+}
+
+.card:nth-child(2n+1), section:nth-child(2n+1){
+  background-color: white;
 }
 
 section {
@@ -108,6 +115,11 @@ h3 {
   border: none;
   border-radius: 0;
 
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
 }
 
 .card .card-img {
@@ -225,7 +237,9 @@ footer a{
   }
 
   body:has(.card) {
+    /*background: url(/img/home/background_image.svg);*/
     background: url(/img/home/background_image.svg);
+    background-color: #D7EDEE;
   }
 
   .content:has(.card) {
