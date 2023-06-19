@@ -2,14 +2,6 @@
 
 .card {
   box-shadow: 15px 15px 0 #A930D3;
-
-}
-
-
-.container {
-  /* margin-top: 40px; */
-  margin: 40px 20px 0 20px;
-  max-width: 800px;
 }
 
 
@@ -22,27 +14,6 @@
   gap: 10px;
   flex: 1;
   height: 100%;
-  box-sizing: border-box;
-}
-
-
-
-
-
-.dark .selected {
-  background-color: #FF7337;
-}
-
-
-
-
-.subsection-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  
-  gap: 10px;
-  width: 100%;
   box-sizing: border-box;
 }
 
@@ -76,7 +47,7 @@
   box-sizing: border-box;
 }
 
-.responsive-img {
+img.large {
   max-width: 700px;
   /*height: 100%;*/
 }

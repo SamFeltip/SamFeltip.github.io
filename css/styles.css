@@ -52,7 +52,10 @@ main {
 .content {
   display: flex;
   flex-direction: column;
-  max-width: 1000px;
+
+  box-sizing: border-box;
+  width: min(100%, 1000px);
+
 }
 
 /* style every other card */
@@ -120,6 +123,7 @@ h3 {
 .card-body {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .card .card-img {
@@ -131,6 +135,16 @@ h3 {
 
 .card h1, .card h2 {
   font-weight: 300;
+}
+
+
+.card:has(img.large){
+  text-align: center;
+  flex-direction: column;
+}
+
+.card img.large {
+  margin: auto;
 }
 
 .stacked-images {
@@ -239,7 +253,7 @@ footer a{
   body:has(.card) {
     /*background: url(/img/home/background_image.svg);*/
     background: url(/img/home/background_image.svg);
-    background-color: #D7EDEE;
+    /*background-color: #D7EDEE;*/
   }
 
   .content:has(.card) {
@@ -247,6 +261,9 @@ footer a{
   }
 
 
+  .content {
+    padding: 0 3rem;
+  }
 
   .card {
     /* overwrite every other colour changing */
@@ -255,14 +272,10 @@ footer a{
     flex-direction: row;
     text-align: left;
     gap: 2rem;
-    margin: 0 3rem 2rem 3rem;
-
-    /* padding: 0 10px; */
+    margin-bottom:2rem;
 
     border: 5px solid black;
     border-radius: 25px;
-
-
   }
   
   .card .card-img {

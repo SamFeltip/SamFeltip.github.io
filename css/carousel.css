@@ -1,7 +1,8 @@
 /* give a variable to each element which is an nth-child*/
 
 .carousel img, .carousel .carousel-description {
-    display: none
+    display: none;
+    min-height: 10rem;
 }
 
 /*overwrite hidden according to the css variable*/
