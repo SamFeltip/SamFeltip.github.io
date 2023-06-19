@@ -118,7 +118,7 @@ img.large {
 
 
 /* mobile screens */
-@media (min-width: 800px) {
+@media (min-width: 700px) {
 
   .subsection {
     flex-direction: row;
