@@ -41,6 +41,7 @@
 }
 
 .carousel-picker .prev-option, .carousel-picker .next-option {
+    cursor: pointer;
     transition: height 0.5s ease;
     padding: 10px;
 }
