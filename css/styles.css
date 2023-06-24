@@ -21,7 +21,7 @@ body {
 }
 
 /* consider links with icons: icons must be centered */
-a:has(svg){
+a.button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -139,7 +139,7 @@ h3 {
 }
 
 
-.card:has(img.large){
+.card.card-has-large{
   text-align: center;
   flex-direction: column;
 }
@@ -251,7 +251,7 @@ footer a{
     padding-bottom: 2rem;
   }
 
-  body:has(.card) {
+  body {
     /*background: url(/img/home/background_image.svg);*/
     background: url(/img/home/background_image.svg);
     /*background-color: #D7EDEE;*/

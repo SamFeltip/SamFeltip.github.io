@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sam's Portfoio - PROMPT</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/styles.css">
+
+</head>
+<body>
+
+  <div class="content content-alone content-top account-container">
+    <img class="logo" src="/img/PROMPT/PROMPT_logo.png" width="100"/>
+    <h1 class="title">
+      Progress Monitoring for PGR Timelines
+    </h1>
+    <p class="my-5"></p>
+    <hr/>
+    <br/>
+    <div class="row">
+      <div class="col">
+        <a href="#accounts">
+          <div class="span">
+            <%= icon('fa-solid', "user", class: "big-icon col-1 black light fas fa-lg") %>
+          </div>
+          <h3>
+            Accounts
+          </h3>
+        </a>
+      </div>
+      <div class="col">
+        <a href="#forms">
+          <div class="span">
+            <%= icon('fa-solid', "file", class: "big-icon col-1 black light fas fa-lg") %>
+          </div>
+          <h3>
+            Forms
+          </h3>
+        </a>
+      </div>
+      <div class="col">
+        <a href="#timelines">
+          <div class="span">
+            <%= icon('fa-solid', "timeline", class: "big-icon col-1 black light fas fa-lg") %>
+          </div>
+          <h3>
+            Timeline Notifications
+          </h3>
+        </a>
+      </div>
+      <div class="col">
+        <a href="#programmes">
+          <div class="span">
+            <%= icon('fa-solid', "book", class: "big-icon col-1 black light fas fa-lg") %>
+          </div>
+          <h3>
+            Study Programmes
+          </h3>
+        </a>
+      </div>
+      <div class="col">
+        <a href="#researchgroups">
+          <div class="span">
+            <%= icon('fa-solid', "building-columns", class: "big-icon col-1 black light fas fa-lg") %>
+          </div>
+          <h3>
+            Research Groups
+          </h3>
+        </a>
+      </div>
+      <div class="col">
+        <a href="#departments">
+          <div class="span">
+            <%= icon('fa-solid', "school", class: "big-icon col-1 black light fas fa-lg") %>
+          </div>
+          <h3>
+            Departments
+          </h3>
+        </a>
+      </div>
+    </div>
+    <br/>
+    <hr/>
+    <br/>
+    <div class="anchor" id="accounts"></div>
+    <h3>Accounts</h3>
+    <% unless current_user.is_student %>
+    <p class="mb-5">Names and contact information is referred from the TUoS CICS login system</p>
+    <% end %>
+    <div class="row">
+      <div class="col">
+        <div class="span">
+          <%= icon('fa-solid', "user-graduate", class: "big-icon col-1 black light fas fa-lg") %>
+        </div>
+        <h3>Students</h3>
+      </div>
+      <div class="col">
+        <div class="span">
+          <%= icon('fa-solid', "user", class: "big-icon col-1 black light fas fa-lg") %>
+        </div>
+        <h3>Academics</h3>
+        <p>
+          Supervisors
+          <br/>
+          Confirmation Review Assessors
+        </p>
+      </div>
+      <div class="col">
+        <div class="span">
+          <%= icon('fa-solid', "user-tie", class: "big-icon col-1 black light fas fa-lg") %>
+          <h3>Tutors/Directors</h3>
+        </div>
+      </div>
+      <% unless current_user.is_student %>
+      <div class="col">
+        <div class="span">
+          <%= icon('fa-solid', "headset", class: "big-icon col-1 black light fas fa-lg") %>
+        </div>
+        <h3>Admins</h3>
+      </div>
+      <% end %>
+    </div>
+    <br/>
+    <hr/>
+    <div class="row">
+      <br/>
+      <div class="anchor" id="forms"></div>
+      <h3>Form Status indicators</h3>
+      <p class="mt-5">
+        Each student form is given a
+        <b>
+          lateness indicator
+        </b>
+        before it is submitted
+      </p>
+      <div class="col">
+        <div class="span">
+          <%= icon('fa-solid', "clock", class: "big-icon col-1 grey light fas fa-lg") %>
+        </div>
+        <h3>Closed</h3>
+        <p>
+          The form deadline is far away
+          <br/>
+          Action is
+          <b class="grey">
+            not yet needed
+          </b>
+        </p>
+      </div>
+      <div class="col">
+        <div class="span">
+          <%= icon('fa-solid', "hourglass-half", class: "big-icon col-1 amber light fas fa-lg") %>
+        </div>
+        <h3>Deadline Approaching</h3>
+        <p>
+          The form is close to it's deadline
+          <br/>
+          <% if current_user.is_student %>
+          You need
+          <% else %>
+          The student needs
+          <% end %>
+          to
+          <b class="amber">
+            submit the form soon
+          </b>
+        </p>
+      </div>
+      <div class="col">
+        <div class="span">
+          <%= icon('fa-solid', "exclamation-circle", class: "big-icon col-1 red light fas fa-lg") %>
+        </div>
+        <h3>Late</h3>
+        <p>
+          The form missed it's deadline
+          <br/>
+          <b class="red">
+            It must be submitted as soon as possible.
+          </b>
+        </p>
+      </div>
+    </div>
+    <br/>
+    <div class="row">
+      <p class="mt-5">
+        When a form is submitted, the form is given a
+        <b>
+          submission status indicator
+        </b>
+      </p>
+      <div class="col">
+        <div class="span">
+          <%= icon('fa-solid', "arrow-up-from-bracket", class: "big-icon col-1 blue light fas fa-lg") %>
+        </div>
+        <h3>
+          Submitted
+        </h3>
+        <p>
+          The
+          <b class="blue">
+            student
+          </b>
+          has submitted the form
+          <br/>
+          <b class="blue">
+            Staff
+          </b>
+          now need to approve it
+        </p>
+      </div>
+      <div class="col">
+        <div class="span">
+          <%= icon('fa-solid', "hourglass-half", class: "big-icon col-1 darkorange light fas fa-lg") %>
+        </div>
+        <h3>
+          Action Needed
+        </h3>
+        <p>
+          A
+          <b class="darkorange">
+            staff member
+          </b>
+          has rejected the form
+          <br/>
+          The
+          <b class="darkorange">
+            student
+          </b>
+          needs to resubmit it
+        </p>
+      </div>
+      <div class="col">
+        <div class="span">
+          <%= icon('fa-solid', "sync-alt", class: "big-icon col-1 purple light fas fa-lg") %>
+        </div>
+        <h3>
+          Awaiting Approval
+        </h3>
+        <p>
+          The
+          <b class="purple">
+            final staff member
+          </b>
+          needs to approve the form
+          <br/>
+        </p>
+      </div>
+      <div class="col">
+        <div class="span">
+          <%= icon('fa-solid', "check-circle", class: "big-icon col-1 green light fas fa-lg") %>
+        </div>
+        <h3>Approved</h3>
+        <p>
+          All necessary staff have approved the form
+          <br/>
+          <b class="green">No further action is needed</b>
+        </p>
+      </div>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div class="row">
+      <h3>Approval Timelines</h3>
+      <p>The form timeline at the bottom of each form shows you the approval status of a form</p>
+      <p>The text in bold shows you which role you play for this form</p>
+      <p>Hover over a circle to act on the form</p>
+      <% if current_user.is_student %>
+      <div class="ufl-timeline">
+        <div class="events">
+          <ul>
+            <li>
+              <a class="waiting primary_role" href="#0" id="student_link">
+                <h3>
+                  Student
+                </h3>
+                <div class="ufl_icons">
+                  <div class="status_icon">
+                    <i aria-hidden="true" class="fas fa-sync-alt status waiting"></i>
+                  </div>
+                  <div class="student_submit">
+                    <button class="student_submit_button" disabled="disabled" id="student_forward_button" name="student_submission" type="submit">
+                      <i aria-hidden="true" class="fas fa-arrow-up-from-bracket waiting" disabled="disabled"></i>
+                      <div class="button_text">submit</div>
+                    </button>
+                  </div>
+                  <div class="student_draft">
+                    <button class="draft_button" disabled="disabled">
+                      <i aria-hidden="true" class="fas fa-file satisfied"></i>
+                      <div class="button_text">save draft</div>
+                    </button>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="waiting" href="#0">
+                <h3>
+                  Supervisor
+                </h3>
+                <div class="ufl_icons">
+                  <div class="status_icon">
+                    <i aria-hidden="true" class="fas fa-sync-alt status waiting"></i>
+                  </div>
+                  <div class="no_access">
+                    <i aria-hidden="true" class="fas fa-x waiting"></i>
+                    <div class="button_text text-center"></div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="waiting" href="#0">
+                <h3>
+                  Tutor
+                </h3>
+                <div class="ufl_icons">
+                  <div class="status_icon">
+                    <i aria-hidden="true" class="fas fa-sync-alt status waiting"></i>
+                  </div>
+                  <div class="no_access">
+                    <i aria-hidden="true" class="fas fa-x waiting"></i>
+                    <div class="button_text text-center"></div>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <% else %>
+      <div class="ufl-timeline">
+        <div class="events">
+          <ul>
+            <li>
+              <a class="satisfied" href="#0" id="student_link">
+                <h3>
+                  Student
+                </h3>
+                <div class="ufl_icons">
+                  <div class="status_icon">
+                    <i aria-hidden="true" class="fas fa-check-circle status satisfied"></i>
+                  </div>
+                  <div class="no_access">
+                    <i aria-hidden="true" class="fas fa-x student"></i>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="satisfied" href="#0">
+                <h3>
+                  Supervisor
+                </h3>
+                <div class="ufl_icons">
+                  <div class="status_icon">
+                    <i aria-hidden="true" class="fas fa-check-circle status satisfied"></i>
+                  </div>
+                  <div class="approve_icon">
+                    <button class="approve_button" disabled="disabled" id="supervisor_forward_button" name="staff_approval" type="submit" value="supervisor">
+                      <i aria-hidden="true" class="fas fa-share satisfied"></i>
+                      <div class="button_text">approve  forward</div>
+                    </button>
+                  </div>
+                  <div class="draft_icon">
+                    <button class="draft_button" disabled="disabled">
+                      <i aria-hidden="true" class="fas fa-file satisfied"></i>
+                      <div class="button_text">save draft</div>
+                    </button>
+                  </div>
+                  <div class="reject_prev_icon">
+                    <button class="reject_prev_button" disabled="disabled" id="supervisor_reject_prev_button" name="staff_reject_prev" type="submit" value="supervisor">
+                      <i aria-hidden="true" class="fas fa-reply unsatisfied"></i>
+                      <div class="button_text">reject prev</div>
+                    </button>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="waiting primary_role" href="#0">
+                <h3>
+                  Admin
+                </h3>
+                <div class="ufl_icons">
+                  <div class="status_icon">
+                    <i aria-hidden="true" class="fas fa-sync-alt status waiting"></i>
+                  </div>
+                  <div class="approve_icon">
+                    <button class="approve_button" disabled="disabled" id="tutor_forward_button" name="staff_approval" type="submit" value="tutor">
+                      <i aria-hidden="true" class="fas fa-flag-checkered satisfied"></i>
+                      <div class="button_text">approve</div>
+                    </button>
+                  </div>
+                  <div class="draft_icon">
+                    <button class="draft_button" disabled="disabled">
+                      <i aria-hidden="true" class="fas fa-file satisfied"></i>
+                      <div class="button_text">save draft</div>
+                    </button>
+                  </div>
+                  <div class="reject_all_icon">
+                    <button class="reject_all_button" disabled="disabled" id="tutor_reject_all_button" name="staff_reject_all" type="submit" value="tutor">
+                      <i aria-hidden="true" class="fas fa-reply-all unsatisfied"></i>
+                      <div class="button_text">reject all</div>
+                    </button>
+                  </div>
+                  <div class="reject_prev_icon">
+                    <button class="reject_prev_button" disabled="disabled" id="tutor_reject_prev_button" name="staff_reject_prev" type="submit" value="tutor">
+                      <i aria-hidden="true" class="fas fa-reply unsatisfied"></i>
+                      <div class="button_text">reject prev</div>
+                    </button>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <% end %>
+    </div>
+    <% if current_user.is_student %>
+    <div class="row">
+      <div class="col">
+        <div class="span">
+          <%= icon('fa-solid', "arrow-up-from-bracket", class: "big-icon col-1 blue light fas fa-lg") %>
+        </div>
+        <h3>
+          Submit
+        </h3>
+        <p>
+          This button emails the next staff member in line
+        </p>
+        <p>
+          <b class="blue">
+            You cannot change a submitted form
+          </b>
+          unless the form is rejected
+        </p>
+      </div>
+      <div class="col">
+        <div class="span">
+          <%= icon('fa-solid', "file", class: "big-icon col-1 lightgrey light fas fa-lg") %>
+        </div>
+        <h3>
+          Save Draft
+        </h3>
+        <p>
+          This button saves your progress for later
+          <br/>
+          <b class="lightgrey">
+            This feature is coming soon
+          </b>
+        </p>
+      </div>
+      <div class="col">
+        <div class="span">
+          <%= icon('fa-solid', "x", class: "big-icon col-1 grey light fas fa-lg") %>
+        </div>
+        <h3>
+          No Access
+        </h3>
+        <p>
+          You are not permitted to act as this role
+        </p>
+      </div>
+    </div>
+    <% else %>
+    <p class="my-5"></p>
+    <h6 class="mt-5">
+      Buttons appear to allow you to approve or reject a form
+    </h6>
+    <div class="row">
+      <div class="col">
+        <div class="span">
+          <%= icon('fa-solid', "reply-all", class: "big-icon col-1 red light fas fa-lg") %>
+        </div>
+        <h3>
+          reject all
+        </h3>
+        <p>
+          This button resets the form
+          <br/>
+          <b class="red">
+            it emails the student
+          </b>
+        </p>
+      </div>
+      <div class="col">
+        <div class="span">
+          <%= icon('fa-solid', "reply", class: "big-icon col-1 red light fas fa-lg") %>
+        </div>
+        <h3>
+          reject prev
+        </h3>
+        <p>
+          This button passes the form back
+          <br/>
+          <b class="red">
+            it emails the previous user
+          </b>
+        </p>
+      </div>
+      <div class="col">
+        <div class="span">
+          <%= icon('fa-solid', "share", class: "big-icon col-1 green light fas fa-lg") %>
+        </div>
+        <h3>
+          Approve Forward
+        </h3>
+        <p>
+          This button passes the form forward
+          <br/>
+          <b class="green">
+            It emails the next staff in line
+          </b>
+        </p>
+      </div>
+      <div class="col">
+        <div class="span">
+          <%= icon('fa-solid', "flag-checkered", class: "big-icon col-1 green light fas fa-lg") %>
+        </div>
+        <h3>
+          Approve
+        </h3>
+        <p>
+          This button approves the form
+          <br/>
+          <b class="green">
+            The student is emailed
+          </b>
+        </p>
+      </div>
+    </div>
+    <br/>
+    <h6 class="mt-5">
+      Additional Form Functionality
+    </h6>
+    <div class="row">
+      <div class="col">
+        <div class="span">
+          <%= icon('fa-solid', "file", class: "big-icon col-1 lightgrey light fas fa-lg") %>
+        </div>
+        <h3>
+          Save Draft
+        </h3>
+        <p>
+          This button saves your progress for later
+          <br/>
+          <b class="lightgrey">
+            This feature is coming soon
+          </b>
+        </p>
+      </div>
+      <div class="col">
+        <div class="span">
+          <%= icon('fa-solid', "x", class: "big-icon col-1 grey light fas fa-lg") %>
+        </div>
+        <h3>
+          No Access
+        </h3>
+        <p>
+          This means You are not permitted to act as this role
+          <br/>
+          This may be because you do not have authority, or because the form is complete
+        </p>
+      </div>
+      <div class="col">
+        <div class="span">
+          <div class="pt-4 pb-3">
+            <button class="btn btn-dark btn-primary">
+              Revoke Approval of Form
+            </button>
+          </div>
+          <br/>
+        </div>
+        <h3>
+          Revoke Approval
+        </h3>
+        <p>
+          Admins can revoke all form approval
+          <br/>
+          This resets form approval, but keeps inputs into the form
+        </p>
+      </div>
+    </div>
+    <% end %>
+    <br/>
+    <hr/>
+    <div class="anchor" id="timelines"></div>
+    <br/>
+    <h3>Timelines and Notifications</h3>
+    <p>Timelines are collections of forms, and they can be associated with many study programmes</p>
+    <br/>
+    <h6>The following are variables which can be set for each form on a timeline</h6>
+    <br/>
+    <div class="row">
+      <div class="col">
+        <div class="span">
+          <%= icon('fa-solid', "calendar-day", class: "col-1 light fas fa-lg") %>
+        </div>
+        <h6>Due Days</h6>
+        <p>A form submission is required after this many days</p>
+      </div>
+      <div class="col">
+        <div class="span">
+          <%= icon('fa-solid', "door-open", class: "col-1 light fas fa-lg") %>
+        </div>
+        <h6>Open from</h6>
+        <p>
+          Decides how many days before deadline a form will
+          <b class="amber">
+            open
+          </b>
+        </p>
+      </div>
+      <div class="col">
+        <div class="span">
+          <%= icon('fa-solid', "comment", class: "col-1 light fas fa-lg") %>
+        </div>
+        <h6>Reminders from</h6>
+        <p>Decides how many weeks before deadline the student is notified</p>
+      </div>
+      <div class="col">
+        <div class="span">
+          <%= icon('fa-solid', "clock", class: "col-1 light fas fa-lg") %>
+        </div>
+        <h6>Reminder Frequency</h6>
+        <p>The student will be notified to submit the form frequently</p>
+      </div>
+    </div>
+    <br/>
+    <div class="row">
+      <p>
+        Students can be manually notified by admins to fill in forms
+        <br/>
+        This is done in the student view with the
+        <%= icon('fa-solid', "comment", class: "light fas") %>
+        icon
+      </p>
+    </div>
+    <hr/>
+    <br/>
+    <% unless current_user.is_student %>
+    <div class="anchor" id="programmes"></div>
+    <div class="row">
+      <h3>
+        Study programmes
+      </h3>
+      <div class="col">
+        <p>The base time limit of a study programme dictates the end of a students course</p>
+      </div>
+      <div class="col">
+        <p>the "use default time limit" button implies the study programme's base time limit decides when a student graduates</p>
+      </div>
+      <div class="col">
+        <p>When a student moves study programmes, their time limit is changed appropriately, but there is a manual override in the student edit view if needed</p>
+      </div>
+    </div>
+    <hr/>
+    <br/>
+    <div class="anchor" id="researchgroups"></div>
+    <div class="row">
+      <h3>
+        Research Groups
+      </h3>
+      <p>Research groups infer the primary department of a staff member</p>
+      <p>A staff member with the tutor rank can only act as a tutor on forms which are assigned to their primary department</p>
+    </div>
+    <hr/>
+    <br/>
+    <div class="anchor" id="departments"></div>
+    <div class="row">
+      <h3>
+        Departments
+      </h3>
+      <p>Staff can be associated with many departments. This is done on the /myaccount view, or the staff view</p>
+      <p>
+        <b>It is extremely important forms, timelines, study programmes and research groups are assigned a department</b>
+        <br/>
+        If this is not done, these items may not be visible to the correct users
+      </p>
+    </div>
+    <hr/>
+    <br/>
+    <% end %>
+    <div class="row">
+      <p>
+        Further information can be found
+        <a href="https://sites.google.com/sheffield.ac.uk/prompt/home">here</a>
+      </p>
+      <% if current_user.is_admin %>
+      <p>
+        Developer information can be found in the legacy user guide
+        <a href="/help_dev">here</a>
+      </p>
+      <% end %>
+    </div>
+  </div>
+</body>
+</html>
+
+

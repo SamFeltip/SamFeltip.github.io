@@ -80,7 +80,7 @@ nav.hidden #nav-content {
 }
 
 /* style the item below the nav */
-body:has(nav) > *:nth-child(2) {
+body > *:nth-child(2) {
   margin-top: calc(var(--navbar-height));
 }
 
