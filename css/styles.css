@@ -1,10 +1,5 @@
-:root {
-  --stacked-image-padding: 50px;
-}
 
-
-
-h1, h2, h3, p, li, .button {
+h1, h2, h3, p, li, .button, span {
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -21,7 +16,7 @@ body {
 }
 
 /* consider links with icons: icons must be centered */
-a.button {
+.a-has-svg {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -148,32 +143,6 @@ h3 {
   margin: auto;
 }
 
-.stacked-images {
-  position: relative;
-  top: 0;
-  left: 0;
-  padding-right: var(--stacked-image-padding);
-}
-
-.stacked-images img{
-  max-width: 180px;
-  height: auto;
-
-}
-
-.stacked-images img:nth-child(1){
-  position: relative;
-  top: 0;
-  left: 0;
-  z-index: 0;
-}
-
-.stacked-images img:nth-child(2){
-  position: absolute;
-  left: var(--stacked-image-padding);
-  z-index: 1;
-}
-
 
 #card-header {
   box-shadow: 0 15px 0 #f00;
@@ -243,10 +212,6 @@ footer a{
 @media (min-width: 700px) {
 
 
-  :root {
-    --stacked-image-padding: 70px;
-  }
-
   main {
     padding-bottom: 2rem;
   }
@@ -282,14 +247,6 @@ footer a{
   .card .card-img {
     width: 20rem;
   }
-
-  /* mockup images are treated differently */
-  .stacked-images img{
-    max-height: 400px;
-    width: auto;
-    min-width: 0;
-  }
-
 
   #card-header {
     box-shadow: 15px 15px 0 #f00;
