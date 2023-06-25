@@ -1,4 +1,8 @@
 
+let panes = document.querySelectorAll("main");
+
+
+
 let page_tab_links = document.querySelector(".page-tabs");
 
 let des_body = document.querySelector("#design-body");
@@ -12,8 +16,10 @@ let planning_button = page_tab_links.querySelector("#planning");
 planning_button.addEventListener("click", event => {
   let body = document.querySelector("body");
 
-  des_body.style.display = "none";
-  dev_body.style.display = "none";
+  panes.forEach((pane) => {
+    pane.style.display = "none";
+  })
+
   plan_body.style.display = "flex";
 
   designing_button.classList.remove("selected");
@@ -25,8 +31,10 @@ planning_button.addEventListener("click", event => {
 developing_button.addEventListener("click", event => {
   let body = document.querySelector("body");
 
-  des_body.style.display = "none";
-  plan_body.style.display = "none";
+  panes.forEach((pane) => {
+    pane.style.display = "none";
+  })
+
   dev_body.style.display = "flex";
 
   designing_button.classList.remove("selected");
@@ -40,8 +48,10 @@ designing_button.addEventListener("click", event => {
   body.classList.remove("dark");
   body.classList.add("light");
 
-  dev_body.style.display = "none";
-  plan_body.style.display = "none";
+  panes.forEach((pane) => {
+    pane.style.display = "none";
+  })
+
   des_body.style.display = "flex";
 
   planning_button.classList.remove("selected");

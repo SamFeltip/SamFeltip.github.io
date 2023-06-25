@@ -1,6 +1,5 @@
 :root {
   --navbar-height : 5rem;
-  --nav-content-height: 12rem;
 }
 
 @font-face {
@@ -53,15 +52,10 @@ nav h1 {
 
 }
 
-nav.hidden #nav-content {
-  /* move the navbar content up and shrink to invisible */
-  transform: translateY( calc(var(--nav-content-height) * -1) );
-  height: 0;
-  transition: 0.2s ease;
-}
-
 
 #nav-content {
+  --nav-content-height: 12rem;
+
   height: var(--nav-content-height);
   transition: 0.2s ease;
 
@@ -69,6 +63,13 @@ nav.hidden #nav-content {
 
   position: relative;
   z-index: 3;
+}
+
+nav.hidden #nav-content {
+  /* move the navbar content up and shrink to invisible */
+  transform: translateY( calc(var(--nav-content-height) * -1) );
+  height: 0;
+  transition: 0.2s ease;
 }
 
 #nav-content * {
@@ -81,7 +82,7 @@ nav.hidden #nav-content {
 
 /* style the item below the nav */
 body > *:nth-child(2) {
-  margin-top: calc(var(--navbar-height));
+  margin-top: var(--navbar-height);
 }
 
 @media (min-width: 700px) {

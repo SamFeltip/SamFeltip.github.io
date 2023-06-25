@@ -38,4 +38,8 @@
   .d-md-none {
     display: none;
   }
+
+  .row-reverse {
+    flex-direction: row-reverse !important;
+  }
 }

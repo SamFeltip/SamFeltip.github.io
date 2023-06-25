@@ -53,12 +53,12 @@ main {
 
 }
 
-/* style every other card */
-.card:nth-child(2n), section:nth-child(2n){
+/* style every other section */
+section:nth-child(2n){
   background-color: #D7EDEE;
 }
 
-.card:nth-child(2n+1), section:nth-child(2n+1){
+section:nth-child(2n+1){
   background-color: white;
 }
 
@@ -76,20 +76,6 @@ section .banner{
   object-fit: cover;
 }
 
-.mockup-list {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  overflow: hidden;
-}
-
-.mockup-list img {
-  flex: 1;
-  width: 33% !important;
-  height: auto !important;
-  max-width: 200px;
-}
-
 h2 {
   color: #F00;
 }
@@ -98,96 +84,18 @@ h3 {
   font-weight: 300;
 }
 
-.card {
-
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  overflow: hidden;
-
-  justify-content: center;
-  align-items: center;
-
-  padding: 50px 20px;
-
-  background: white;
-  border: none;
-  border-radius: 0;
-
-}
-
-.card-body {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.card .card-img {
-  width: 100%;
-  max-width: 420px;
-  height: 400px;
-  object-fit: cover;
-}
-
-.card h1, .card h2 {
-  font-weight: 300;
-}
-
-
-.card.card-has-large{
-  text-align: center;
-  flex-direction: column;
-}
-
-.card img.large {
-  margin: auto;
-}
-
-
-#card-header {
-  box-shadow: 0 15px 0 #f00;
-}
-
-#card-about {
-  flex-direction: column;
-  box-shadow: 0 15px 0 #D38530;
-}
-
-#card-projects {
-  box-shadow: 0 15px 0 #A930D3;
-}
-
-#card-header .button {
-  background-color: #f00;
-  color: white;
-  padding: 5px 20px;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-}
-
-#card-header em {
-  color: #f00;
-  text-align: center;
-}
-
-#card-about img {
-  border-radius: 20px;
-}
-
-#card-about a {
-  color: #D38530;
-}
-
-
-#card-projects a {
-  color: #A930D3;
-
-}
 
 section a {
   color: #00767D;
   font-weight: 300;
 }
+
+.image {
+  gap: 10px;
+  max-width: 250px;
+  height: 250px;
+}
+
 
 footer {
   padding: 20px;
@@ -217,50 +125,12 @@ footer a{
   }
 
   body {
-    /*background: url(/img/home/background_image.svg);*/
     background: url(/img/home/background_image.svg);
-    /*background-color: #D7EDEE;*/
-  }
-
-  .content:has(.card) {
-    gap: 50px;
   }
 
 
   .content {
     padding: 0 3rem;
-  }
-
-  .card {
-    /* overwrite every other colour changing */
-    background-color: white !important;
-
-    flex-direction: row;
-    text-align: left;
-    gap: 2rem;
-    margin-bottom:2rem;
-
-    border: 5px solid black;
-    border-radius: 25px;
-  }
-  
-  .card .card-img {
-    width: 20rem;
-  }
-
-  #card-header {
-    box-shadow: 15px 15px 0 #f00;
-  }
-  
-  #card-projects {
-    box-shadow: 15px 15px 0 #A930D3;
-  }
-  
-  #card-about {
-    flex-direction: row-reverse;
-
-    box-shadow: 15px 15px 0 #D38530;
-
   }
 
   .contact-options {
