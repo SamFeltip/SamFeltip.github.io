@@ -14,7 +14,7 @@
   :root {
     --text-secondary: var(--white);
     --text-primary: var(--white);
-    --navbar-colour: var(--dark-black);
+    --navbar-color: var(--dark-black);
     --background-primary: var(--gray);
     --background-secondary: var(--light-gray);
     --background-color: var(--gray);
@@ -29,7 +29,7 @@
     /* light mode */
     --text-secondary: var(--white);
     --text-primary: var(--black);
-    --navbar-colour: var(--gray);
+    --navbar-color: var(--gray);
     --background-primary: var(--white);
     --background-secondary: var(--light-blue);
     --background-color: var(--white);

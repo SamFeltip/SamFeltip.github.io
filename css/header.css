@@ -1,5 +1,5 @@
 header {
-  background-color: var(--navbar-colour);
+  background-color: var(--navbar-color);
 
   display: flex;
   align-items: center;

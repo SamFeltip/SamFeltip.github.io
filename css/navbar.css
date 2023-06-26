@@ -14,7 +14,7 @@ nav {
   flex-direction: column;
   height: var(--navbar-height);
 
-  background-color: var(--navbar-colour);
+  background-color: var(--navbar-color);
   color: var(--text-secondary) !important;
   
   width: 100%;
@@ -46,7 +46,7 @@ nav a, nav svg {
 
   height: var(--navbar-height);
 
-  background-color: var(--navbar-colour);
+  background-color: var(--navbar-color);
 
   display: flex;
   flex-direction: row;
@@ -109,12 +109,12 @@ nav:not(.hidden) #nav-header, nav:not(.hidden) #nav-content {
   }
 
   #nav-header {
-     background-color: var(--navbar-colour) !important;
+     background-color: var(--navbar-color) !important;
 
   }
 
   #nav-content {
-    background-color: var(--navbar-colour) !important;
+    background-color: var(--navbar-color) !important;
 
     height: inherit !important;
     transform: none !important;
