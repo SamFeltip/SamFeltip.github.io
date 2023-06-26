@@ -1,3 +1,18 @@
+@media (prefers-color-scheme: light) {
+    :root {
+        --theme-button-icon: "🌙";
+    }
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --theme-button-icon: "☀️";
+    }
+}
+
+#theme-button::after {
+    content: var(--theme-button-icon);
+}
+
 #theme-button {
     border: none;
     background-color: var(--text-primary);

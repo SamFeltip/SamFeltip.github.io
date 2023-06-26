@@ -21,7 +21,7 @@ Visit `/projects/planetGO.html` and check out the 'design' tab to see some mocku
 Clicking on large images shows an expanded view of the image. pressing escape or clicking away dismisses the image.
 
 ## Dark theme
-Adaptive theme to your system. Coming soon!
+Click the button on the top left of any page to change the theme. This has been implemented using CSS variables.
 
 # Don't forget to inspect element!
 This portfolio is as much a personal project as the content it hosts, so be nosy! press f12 on your keyboard to have a look at the HTML, CSS and JavaScript I've written for this portfolio.
