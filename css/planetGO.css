@@ -1,3 +1,7 @@
+:root {
+  --primary-color: #7253DE;
+}
+
 .lighthouse-description {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
