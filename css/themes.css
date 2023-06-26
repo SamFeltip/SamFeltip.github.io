@@ -1,0 +1,38 @@
+#theme-button {
+    border: none;
+    background-color: var(--text-primary);
+    color: var(--background-color);
+    padding: 5px 0;
+    /*margin: auto;*/
+    border-radius: 20px;
+    width: 3.5rem;
+    z-index: 10;
+
+    cursor: pointer;
+    font-size: xx-large;
+}
+
+#theme-button-wrapper{
+    position: relative;
+    /*top: 1rem;*/
+    left: -60px;
+    padding: 1rem;
+    transition: left 0.5s ease;
+}
+
+#theme-button-wrapper:hover {
+    left: 0;
+}
+
+
+@media (min-width: 700px) {
+
+    #theme-button-wrapper {
+        position: absolute;
+        top: calc(1rem + var(--navbar-height));
+        padding: 0 1rem;
+        left: 0;
+
+    }
+
+}

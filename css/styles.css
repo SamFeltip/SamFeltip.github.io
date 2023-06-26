@@ -1,22 +1,25 @@
 :root {
-  --primary-color: #2c9599;
 
   --light-gray: #282828;
   --gray: #202020;
 
   --black: #131313;
-  --dark-black: #080808;
+  --dark-black: #101010;
+
+  --blue: #2c9599;
+  --light-blue: #D7EDEE;
 
   --white: #fbfbfb;
 
+  --primary-color: var(--blue);
   /* light mode */
   --text-secondary: var(--white);
-  --text-primary: var(--gray);
+  --text-primary: var(--black);
   --navbar-colour: var(--gray);
   --background-primary: var(--white);
-  --background-secondary: #D7EDEE;
+  --background-secondary: var(--light-blue);
   --background-color: var(--white);
-  --footer-background: #D7EDEE;
+  --footer-background: var(--light-blue);
   --background-image-url: url(/img/home/background_image.svg);
 
   /* dark mode */
@@ -171,7 +174,7 @@ footer a{
 
   .content > :first-child {
     padding-top: 2rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 
 
