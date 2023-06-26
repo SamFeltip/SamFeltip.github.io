@@ -18,7 +18,7 @@ Visit `/pages/projects/planetGO.html` and see the three stages of development: p
 Visit `/pages/projects/planetGO.html` and check out the 'design' tab to see some mockups made for this project before development began. These are presented on a carousel - click the chevrons below the images to cycle through the images!
 
 ## Large images
-Clicking on images with small text to expand them. Coming soon!
+Clicking on large images shows an expanded view of the image. pressing escape or clicking away dismisses the image.
 
 ## Dark theme
 Adaptive theme to your system. Coming soon!
