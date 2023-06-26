@@ -12,10 +12,10 @@ The navigation on this site is responsive, meaning it minimises on mobile screen
 If you tap on the burger icon in the top right, you'll see a drop-down list of the pages of interest on this site. 
 
 ## Tabs
-Visit `/pages/projects/planetGO.html` and see the three stages of development: planning, designing, and implementing. You can choose which section to view by clicking on the tabs below the header.
+Visit `/projects/planetGO.html` and see the three stages of development: planning, designing, and implementing. You can choose which section to view by clicking on the tabs below the header.
 
 ## Carousel
-Visit `/pages/projects/planetGO.html` and check out the 'design' tab to see some mockups made for this project before development began. These are presented on a carousel - click the chevrons below the images to cycle through the images!
+Visit `/projects/planetGO.html` and check out the 'design' tab to see some mockups made for this project before development began. These are presented on a carousel - click the chevrons below the images to cycle through the images!
 
 ## Large images
 Clicking on large images shows an expanded view of the image. pressing escape or clicking away dismisses the image.
