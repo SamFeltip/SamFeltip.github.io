@@ -4,7 +4,6 @@
   --white: #fbfbfb;
 }
 
-
 h1, h2, h3, p, li, .button, span {
   font-family: 'Montserrat', sans-serif;
 }
@@ -47,8 +46,6 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
-
-  padding-top: 2rem;
 }
 
 .content {
@@ -58,6 +55,11 @@ main {
   box-sizing: border-box;
   width: min(100%, 1000px);
 
+}
+
+.content > :first-child {
+  padding-top: 4rem;
+  /*margin-top: 2rem;*/
 }
 
 /* style every other section */
@@ -133,6 +135,10 @@ footer a{
 /* medium screens */
 @media (min-width: 700px) {
 
+  .content > :first-child {
+    padding-top: 2rem;
+    margin-top: 2rem;
+  }
 
   main {
     padding-bottom: 2rem;
