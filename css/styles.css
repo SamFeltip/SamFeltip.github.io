@@ -1,5 +1,7 @@
 :root {
   --primary-color: #2c9599;
+  --black: #282828;
+  --white: #fbfbfb;
 }
 
 
@@ -64,7 +66,7 @@ section:nth-child(2n){
 }
 
 section:nth-child(2n+1){
-  background-color: white;
+  background-color: var(--white);
 }
 
 section {
@@ -83,7 +85,7 @@ section .banner{
 
 .banner.prompt {
   padding: 15px 60px;
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px var(--black);
   height: auto;
   width: 250px;
 }
@@ -98,7 +100,7 @@ h3 {
 
 
 section a {
-  color: #00767D;
+  color: var(--primary-color);
   font-weight: 300;
 }
 

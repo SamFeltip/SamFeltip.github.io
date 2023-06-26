@@ -4,7 +4,7 @@
 
     box-sizing: border-box;
 
-    outline: black 1px solid;
+    outline: var(--black) 1px solid;
 
 }
 
@@ -17,7 +17,7 @@
     text-align: center;
 
     padding: 10px 0;
-    color: black;
+    color: var(--black);
     background-color: rgba(255, 255, 255, 1);
 
     cursor: pointer;
@@ -25,7 +25,7 @@
 
 .page-tabs .selected {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--white);
 }
 
 .default-hide {

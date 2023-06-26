@@ -5,7 +5,7 @@
 
 img.large {
     width: 100%;
-    background-color: white;
+    background-color: var(--white);
     border-radius: 20px;
     object-fit: scale-down;
 }

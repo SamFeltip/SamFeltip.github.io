@@ -27,12 +27,12 @@
     width: 5px;
     height: 5px;
 
-    border: 1px black solid;
+    border: 1px var(--black) solid;
     border-radius: 100px;
 }
 
 .carousel-picker .carousel-bullet.filled {
-    background-color: black;
+    background-color: var(--black);
 }
 
 

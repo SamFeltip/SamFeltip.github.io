@@ -11,8 +11,8 @@ nav {
   display: flex;
   flex-direction: column;
 
-  background-color: black;
-  color: white;
+  background-color: var(--black);
+  color: var(--white);
   
   width: 100%;
 
@@ -43,7 +43,7 @@ nav a {
 
   height: var(--navbar-height);
 
-  background-color: black;
+  background-color: var(--black);
 
   display: flex;
   flex-direction: row;
@@ -107,12 +107,12 @@ nav:not(.hidden) #nav-header, nav:not(.hidden) #nav-content {
   }
 
   #nav-header {
-     background-color: black !important;
+     background-color: var(--black) !important;
 
   }
 
   #nav-content {
-    background-color: black !important;
+    background-color: var(--black) !important;
 
     height: inherit !important;
     transform: none !important;
