@@ -1,6 +1,5 @@
 .page-tabs {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
 
 
     box-sizing: border-box;
@@ -10,7 +9,7 @@
 }
 
 .page-tabs .tab {
-
+    flex: 1;
     font-size: 16px;
     line-height: 16px;
     font-weight: 700;
@@ -25,7 +24,7 @@
 }
 
 .page-tabs .selected {
-    background-color: rgba(55, 119, 255, 1);
+    background-color: var(--primary-color);
     color: white;
 }
 

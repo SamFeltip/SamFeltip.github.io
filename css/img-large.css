@@ -41,5 +41,6 @@ img.large:hover {
 }
 
 .img-large-expand {
+    margin-top: 10px;
     cursor: pointer;
 }

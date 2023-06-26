@@ -35,6 +35,10 @@ nav h1 {
   font-size: 25px;
 }
 
+nav a {
+  color: inherit;
+}
+
 #nav-header {
 
   height: var(--navbar-height);
@@ -85,6 +89,10 @@ body > *:nth-child(2) {
   margin-top: var(--navbar-height);
 }
 
+nav:not(.hidden) #nav-header, nav:not(.hidden) #nav-content {
+  background-color: var(--primary-color);
+}
+
 @media (min-width: 700px) {
 
   #nav-button {
@@ -98,7 +106,14 @@ body > *:nth-child(2) {
     font-size: 1.2rem;
   }
 
+  #nav-header {
+     background-color: black !important;
+
+  }
+
   #nav-content {
+    background-color: black !important;
+
     height: inherit !important;
     transform: none !important;
 

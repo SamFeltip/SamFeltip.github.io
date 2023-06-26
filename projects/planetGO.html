@@ -67,7 +67,7 @@
         PlanetGO
       </h1>
       <p>
-        PlanetGO is an event management app, where users can plan and collaborate on outings by inviting friends and finding interesting events near them
+        <b>PlanetGO</b> is an event management app, where users can plan and collaborate on outings by inviting friends and finding interesting events near them
       </p>
       <div class="tags">
 
@@ -102,7 +102,7 @@
             <p class="tag-text">Agile Development</p>
           </div>
           <div class="tag">
-            <p class="tag-text">Figma <em>mockups</em></p>
+            <p class="tag-text">Figma <em>prototypes</em></p>
           </div>
         </div>
       </div>
@@ -118,7 +118,7 @@
     </section>
 
     <div class="page-tabs">
-      <div id="planning" class="tab selected">
+      <div id="planning" class="tab" data-target="plan-body">
 
         <p class="planning">
           <span class="label">
@@ -130,19 +130,19 @@
           </span>
         </p>
       </div>
-      <div id="designing" class="tab">
+      <div id="designing" class="tab selected" data-target="prototype-body">
         <p class="designing">
           <span class="label">
             🎨
           </span>
 
           <span class="label-desc">
-            prototyping
+            prototypes
           </span>
         </p>
 
       </div>
-      <div id="developing" class="tab">
+      <div id="developing" class="tab" data-target="develop-body">
         <p class="developing">
           <span class="label">
             🧑‍💻
@@ -154,9 +154,7 @@
       </div>
     </div>
 
-    
-
-    <main class="" id="plan-body">
+    <main class="default-hide" id="plan-body">
 
       <div class="content">
 
@@ -195,7 +193,7 @@
 
     </main>
 
-    <main class="default-hide" id="design-body">
+    <main class="" id="prototype-body">
 
       <div class="content">
 
@@ -223,7 +221,7 @@
 
 
           <div class="card-body">
-            <h1>Mockups were built using Figma</h1>
+            <h1>Prototypes were built using Figma</h1>
             <div class="carousel-descriptions">
 
               <div class="display carousel-description">
@@ -297,6 +295,9 @@
             <h1>Development process</h1>
             <p>
               This project was built with a team of 3 developers over an 8 month period
+            </p>
+            <p>
+              <b>Ruby on Rails</b> was used for the full development stack, and the database was managed with <b>Postgres</b>
             </p>
             <p>
               <b>Agile Development</b> was used to ensure features were implemented iteratively and tracked productivity over the project timeline with <b>Kanban</b>.

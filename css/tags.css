@@ -33,7 +33,7 @@
 }
 
 .tags-primary .tag {
-    background-color: rgba(55, 119, 255, 1);
+    background-color: var(--primary-color);
 }
 
 .dark .tags-primary .tag{

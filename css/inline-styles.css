@@ -14,6 +14,10 @@
   align-items: center;
 }
 
+.text-align-center {
+  text-align: center;
+}
+
 .justify-content-between {
   justify-content: space-between;
 }
@@ -32,6 +36,10 @@
 
 .d-inline{
   display: inline;
+}
+
+.object-fit-contain {
+  object-fit: contain !important;
 }
 
 @media (min-width: 700px) {

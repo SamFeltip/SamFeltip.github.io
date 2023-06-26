@@ -9,7 +9,7 @@
 
 
 .card {
-    box-shadow: 15px 15px 0 #A930D3;
+    box-shadow: 15px 15px 0 var(--primary-color);
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -37,6 +37,7 @@
     max-width: 420px;
     height: 400px;
     object-fit: cover;
+    border-radius: 20px;
 }
 
 .card h1, .card h2 {
@@ -72,10 +73,6 @@
 #card-header em {
     color: #f00;
     text-align: center;
-}
-
-#card-about img {
-    border-radius: 20px;
 }
 
 #card-about a {
