@@ -18,14 +18,14 @@
 
     padding: 10px 0;
     color: var(--black);
-    background-color: var(--white);
+    background-color: var(--background-primary);
 
     cursor: pointer;
 }
 
 .page-tabs .selected {
     background-color: var(--primary-color);
-    color: var(--white);
+    color: var(--text-secondary);
 }
 
 .default-hide {

@@ -1,11 +1,42 @@
 :root {
   --primary-color: #2c9599;
-  --black: #282828;
+
+  --light-gray: #282828;
+  --gray: #202020;
+
+  --black: #131313;
+  --dark-black: #080808;
+
   --white: #fbfbfb;
+
+  /* light mode */
+  --text-secondary: var(--white);
+  --text-primary: var(--gray);
+  --navbar-colour: var(--gray);
+  --background-primary: var(--white);
+  --background-secondary: #D7EDEE;
+  --background-color: var(--white);
+  --footer-background: #D7EDEE;
+  --background-image-url: url(/img/home/background_image.svg);
+
+  /* dark mode */
+  /*--text-secondary: var(--white);*/
+  /*--text-primary: var(--white);*/
+  /*--navbar-colour: var(--dark-black);*/
+  /*--background-primary: var(--gray);*/
+  /*--background-secondary: var(--light-gray);*/
+  /*--background-color: var(--gray);*/
+  /*--footer-background: var(--dark-black);*/
+  /*--background-image-url: url(/img/home/background_image_dark.svg);*/
+
+
+
+
 }
 
-h1, h2, h3, p, li, .button, span {
+h1, h2, h3, p, li, .button, span, svg {
   font-family: 'Montserrat', sans-serif;
+  color: var(--text-primary);
 }
 
 img {
@@ -46,6 +77,8 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
+
+  padding-bottom: 2rem;
 }
 
 .content {
@@ -64,11 +97,11 @@ main {
 
 /* style every other section */
 section:nth-child(2n){
-  background-color: #D7EDEE;
+  background-color: var(--background-secondary);
 }
 
 section:nth-child(2n+1){
-  background-color: var(--white);
+  background-color: var(--background-primary);
 }
 
 section {
@@ -90,6 +123,7 @@ section .banner{
   box-shadow: 0 0 10px var(--black);
   height: auto;
   width: 250px;
+  background-color: var(--white);
 }
 
 h2 {
@@ -115,7 +149,7 @@ section a {
 
 footer {
   padding: 20px;
-  background-color: #D7EDEE;
+  background-color: var(--footer-background);
   margin-top: auto;
   text-align: center;
 
@@ -140,12 +174,11 @@ footer a{
     margin-top: 2rem;
   }
 
-  main {
-    padding-bottom: 2rem;
-  }
+
 
   body {
-    background: url(/img/home/background_image.svg);
+    background-color: var(--background-color);
+    background: var(--background-image-url);
   }
 
 

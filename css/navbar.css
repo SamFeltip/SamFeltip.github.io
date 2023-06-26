@@ -11,8 +11,8 @@ nav {
   display: flex;
   flex-direction: column;
 
-  background-color: var(--black);
-  color: var(--white);
+  background-color: var(--navbar-colour);
+  color: var(--text-secondary) !important;
   
   width: 100%;
 
@@ -36,14 +36,14 @@ nav h1 {
 }
 
 nav a {
-  color: inherit;
+  color: var(--text-secondary);
 }
 
 #nav-header {
 
   height: var(--navbar-height);
 
-  background-color: var(--black);
+  background-color: var(--navbar-colour);
 
   display: flex;
   flex-direction: row;
@@ -107,12 +107,12 @@ nav:not(.hidden) #nav-header, nav:not(.hidden) #nav-content {
   }
 
   #nav-header {
-     background-color: var(--black) !important;
+     background-color: var(--navbar-colour) !important;
 
   }
 
   #nav-content {
-    background-color: var(--black) !important;
+    background-color: var(--navbar-colour) !important;
 
     height: inherit !important;
     transform: none !important;

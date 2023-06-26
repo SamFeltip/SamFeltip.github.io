@@ -36,12 +36,16 @@
     background-color: var(--primary-color);
 }
 
+.selected .label-desc {
+    color: var(--white) !important;
+}
+
 .dark .tags-primary .tag{
     background-color: #FF7337;
 }
 
 .tag-text {
-    color: var(--white);
+    color: var(--text-secondary);
     font-size: 16px;
     line-height: 16px;
     font-weight: 700;

@@ -1,10 +1,10 @@
 /* style every other card */
 .card:nth-child(2n){
-    background-color: #D7EDEE;
+    background-color: var(--background-secondary);
 }
 
 .card:nth-child(2n+1){
-    background-color: var(--white);
+    background-color: var(--background-primary);
 }
 
 
@@ -20,7 +20,7 @@
 
     padding: 50px 20px;
 
-    background: var(--white);
+    background: var(--background-primary);
     border: none;
     border-radius: 0;
 
@@ -64,7 +64,7 @@
 
 #card-header .button {
     background-color: #f00;
-    color: var(--white);
+    color: var(--text-secondary);
     padding: 5px 20px;
     border-radius: 10px;
     margin-bottom: 1rem;
@@ -75,12 +75,15 @@
     text-align: center;
 }
 
-#card-about a {
+#card-about a * {
     color: #D38530;
 }
 
+#card-header a * {
+    color: var(--white);
+}
 
-#card-projects a {
+#card-projects a * {
     color: #A930D3;
 
 }
@@ -96,7 +99,7 @@
 
     .card {
         /* overwrite every other colour changing */
-        background-color: var(--white) !important;
+        background-color: var(--background-primary) !important;
 
         flex-direction: row;
         text-align: left;
