@@ -1,22 +1,42 @@
 @media (prefers-color-scheme: light) {
-    :root {
-        --theme-button-icon: "🌙";
+
+    body.system-theme {
+        --text-secondary: var(--white);
+        --text-primary: var(--black);
+        --navbar-color: var(--gray);
+        --background-primary: var(--white);
+        --background-secondary: var(--light-blue);
+        --background-color: var(--white);
+        --footer-background: var(--light-blue);
+        --background-image-url: url(/img/home/background_image.svg);
     }
+
+    body.system-theme #theme-button:after {
+        content: "🌙";
+    }
+
 }
 @media (prefers-color-scheme: dark) {
-    :root {
-        --theme-button-icon: "☀️";
-    }
-}
 
-#theme-button::after {
-    content: var(--theme-button-icon);
+    body.system-theme {
+        --text-secondary: var(--white);
+        --text-primary: var(--white);
+        --navbar-color: var(--dark-black);
+        --background-primary: var(--gray);
+        --background-secondary: var(--light-gray);
+        --background-color: var(--gray);
+        --footer-background: var(--dark-black);
+        --background-image-url: url(/img/home/background_image_dark.svg);
+    }
+
+    body.system-theme #theme-button:after {
+        content: "☀️";
+    }
 }
 
 #theme-button {
     border: none;
-    background-color: var(--text-primary);
-    color: var(--background-color);
+    background-color: var(--background-primary);
     padding: 5px 0;
     /*margin: auto;*/
     border-radius: 20px;

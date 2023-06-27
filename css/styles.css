@@ -9,33 +9,34 @@
   --primary-color: var(--blue);
 }
 
-@media (prefers-color-scheme: dark) {
+body.dark-theme {
+  --text-secondary: var(--white);
+  --text-primary: var(--white);
+  --navbar-color: var(--dark-black);
+  --background-primary: var(--gray);
+  --background-secondary: var(--light-gray);
+  --background-color: var(--gray);
+  --footer-background: var(--dark-black);
+  --background-image-url: url(/img/home/background_image_dark.svg);
+}
 
-  :root {
-    --text-secondary: var(--white);
-    --text-primary: var(--white);
-    --navbar-color: var(--dark-black);
-    --background-primary: var(--gray);
-    --background-secondary: var(--light-gray);
-    --background-color: var(--gray);
-    --footer-background: var(--dark-black);
-    --background-image-url: url(/img/home/background_image_dark.svg);
-  }
+body.light-theme {
+  --text-secondary: var(--white);
+  --text-primary: var(--black);
+  --navbar-color: var(--gray);
+  --background-primary: var(--white);
+  --background-secondary: var(--light-blue);
+  --background-color: var(--white);
+  --footer-background: var(--light-blue);
+  --background-image-url: url(/img/home/background_image.svg);
+}
+
+@media (prefers-color-scheme: dark) {
 
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
-    /* light mode */
-    --text-secondary: var(--white);
-    --text-primary: var(--black);
-    --navbar-color: var(--gray);
-    --background-primary: var(--white);
-    --background-secondary: var(--light-blue);
-    --background-color: var(--white);
-    --footer-background: var(--light-blue);
-    --background-image-url: url(/img/home/background_image.svg);
-  }
+
 }
 
 h1, h2, h3, p, li, .button, span, svg {

@@ -1,48 +1,82 @@
 const root = document.querySelector(':root');
 let theme_button = document.getElementById("theme-button");
+let body = document.body;
 
-function setTheme(theme_color){
+const LIGHT_THEME_ICON = "☀️";
+const SYSTEM_THEME_ICON = "🖥️";
+const DARK_THEME_ICON = "🌙";
 
-    localStorage.setItem('theme_color', theme_color);
+function setTheme(theme){
 
-    if(theme_color === "#fbfbfb"){
-        // if light theme, change to dark
-        root.style.setProperty('--text-secondary', 'var(--white)');
-        root.style.setProperty('--text-primary', 'var(--white)');
-        root.style.setProperty('--navbar-color', 'var(--dark-black)');
-        root.style.setProperty('--background-primary', 'var(--gray)');
-        root.style.setProperty('--background-secondary', 'var(--light-gray)');
-        root.style.setProperty('--background-color', 'var(--gray)');
-        root.style.setProperty('--footer-background', 'var(--dark-black)');
-        root.style.setProperty('--background-image-url', 'url(/img/home/background_image_dark.svg)');
+    localStorage.setItem('theme_pref', theme);
 
-        root.style.setProperty('--theme-button-icon', "☀️");
-        theme_button.innerHTML =  "☀️";
+    switch(theme){
+        case 'system':
+            // change to desktop pref
 
-    }else if(theme_color === "#202020"){
-        // if dark theme, change to light
-        root.style.setProperty('--text-secondary', 'var(--white)');
-        root.style.setProperty('--text-primary', 'var(--gray)');
-        root.style.setProperty('--navbar-color', 'var(--gray)');
-        root.style.setProperty('--background-primary', 'var(--white)');
-        root.style.setProperty('--background-secondary', 'var(--light-blue)');
-        root.style.setProperty('--background-color', 'var(--white)');
-        root.style.setProperty('--footer-background', 'var(--light-blue)');
-        root.style.setProperty('--background-image-url', 'url(/img/home/background_image.svg)');
+            body.classList.remove('light-theme');
+            body.classList.remove('dark-theme');
+            body.classList.add('system-theme')
 
-        root.style.setProperty('--theme-button-icon', "🌙");
-        theme_button.innerHTML = "🌙";
+            // theme_button.innerHTML = SYSTEM_THEME_ICON;
+
+            break;
+        case 'light':
+            // change to light theme
+
+            body.classList.add('light-theme');
+            body.classList.remove('dark-theme');
+            body.classList.remove('system-theme');
+
+            theme_button.innerHTML = DARK_THEME_ICON;
+            break;
+        case 'dark':
+            // change to dark theme
+            body.classList.add('dark-theme');
+            body.classList.remove('light-theme');
+            body.classList.remove('system-theme');
+
+            theme_button.innerHTML =  LIGHT_THEME_ICON;
+            break;
     }
 }
 
 theme_button.addEventListener("click", e => {
 
-    let theme_color = getComputedStyle(root).getPropertyValue('--background-primary');
-    setTheme(theme_color);
+
+    let is_light = body.classList.contains('light-theme');
+    let is_dark = body.classList.contains('dark-theme');
+    let is_system = body.classList.contains('system-theme');
+
+    if(is_light) setTheme('dark');
+    if(is_dark) setTheme('light');
+
+    if(is_system) {
+        // check what the system is and set to the opposite
+        const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
+        if (darkThemeMq.matches) {
+            // Theme set to dark.
+            setTheme('light');
+        } else {
+            // Theme set to light.
+            setTheme('dark');
+        }
+
+    }
+
 
 })
 
-// theme_color = localStorage.getItem('theme_color');
-// setTheme(theme_color)
 
+
+
+window.matchMedia('(prefers-color-scheme: dark)')
+    .addEventListener('change',({ matches }) => {
+        localStorage.setItem('theme_pref', 'system-theme');
+        setTheme('system-theme');
+    })
+
+
+theme_color = localStorage.getItem('theme_pref');
+setTheme(theme_color)
 
