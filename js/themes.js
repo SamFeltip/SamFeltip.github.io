@@ -13,12 +13,9 @@ function setTheme(theme){
     switch(theme){
         case 'system':
             // change to desktop pref
-
             body.classList.remove('light-theme');
             body.classList.remove('dark-theme');
             body.classList.add('system-theme')
-
-            // theme_button.innerHTML = SYSTEM_THEME_ICON;
 
             break;
         case 'light':
@@ -61,22 +58,17 @@ theme_button.addEventListener("click", e => {
             // Theme set to light.
             setTheme('dark');
         }
-
     }
-
-
 })
 
-
-
-
+// when system theme changes, set theme preference to system theme
 window.matchMedia('(prefers-color-scheme: dark)')
     .addEventListener('change',({ matches }) => {
         localStorage.setItem('theme_pref', 'system-theme');
         setTheme('system-theme');
     })
 
-
+// on page load, get the prefered system theme and adjust to it
 theme_color = localStorage.getItem('theme_pref');
 setTheme(theme_color)
 

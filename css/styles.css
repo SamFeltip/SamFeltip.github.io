@@ -31,14 +31,6 @@ body.light-theme {
   --background-image-url: url(/img/home/background_image.svg);
 }
 
-@media (prefers-color-scheme: dark) {
-
-}
-
-@media (prefers-color-scheme: light) {
-
-}
-
 h1, h2, h3, p, li, .button, span, svg {
   font-family: 'Montserrat', sans-serif;
   color: var(--text-primary);
