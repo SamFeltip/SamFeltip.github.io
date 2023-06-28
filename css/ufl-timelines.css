@@ -22,7 +22,7 @@
 }
 
 .ufl-timeline .status {
-    background-color: var(--white);
+    background-color: var(--background-primary);
     transition: 0.5s ease;
 
 }
@@ -103,7 +103,7 @@
 
 .ufl-timeline .ufl_icons:hover .options {
     transform: translateY(-2em);
-    background-color: var(--white);
+    background-color: var(--background-primary);
     width: 80%;
     height: 50px;
 }
