@@ -61,7 +61,7 @@ svg {
   fill: currentcolor
 }
 
-a {
+a, a *{
   text-decoration: none;
   color: var(--primary-color);
 
@@ -76,7 +76,6 @@ main {
   align-items: center;
   flex-direction: column;
 
-  padding-bottom: 2rem;
 }
 
 .content {
@@ -117,7 +116,7 @@ section .banner{
 }
 
 .banner.prompt {
-  padding: 15px 60px;
+  padding: 15px 10px;
   box-shadow: 0 0 10px var(--black);
   height: auto;
   width: 250px;
@@ -156,7 +155,11 @@ footer {
 footer a{
   flex-direction: column;
   flex: 1;
-  color: inherit;
+}
+
+footer * {
+  color: var(--black);
+
 }
 
 .contact-options {
@@ -166,6 +169,14 @@ footer a{
 
 /* medium screens */
 @media (min-width: 700px) {
+
+  main .card:nth-last-child(1) {
+    margin-bottom: 50px;
+  }
+
+  .banner.prompt {
+    padding: 15px 60px;
+  }
 
   .content > :first-child {
     padding-top: 2rem;

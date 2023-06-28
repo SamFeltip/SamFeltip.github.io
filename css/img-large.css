@@ -5,7 +5,7 @@
 
 img.large {
     width: 100%;
-    background-color: var(--background-primary);
+    background-color: var(--white);
     border-radius: 20px;
     object-fit: scale-down;
 }
@@ -25,7 +25,7 @@ img.large:hover {
 }
 
 .img-large-wrapper.focus img.large {
-    max-width: 80vw;
+    max-width: 90vw;
     max-height: 80vh;
     background-clip: padding-box;
 }

@@ -36,7 +36,7 @@
 
 #theme-button {
     border: none;
-    background-color: var(--background-primary);
+    background-color: var(--navbar-color);
     padding: 5px 0;
     /*margin: auto;*/
     border-radius: 20px;

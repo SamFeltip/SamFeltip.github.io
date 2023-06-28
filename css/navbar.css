@@ -24,6 +24,8 @@ nav {
   left: 0;
   font-size: 1.7rem;
 
+  border-bottom: var(--navbar-color) 1px solid;
+
   /* appear above the mockups positioned as relative */
   z-index: 2;
 
@@ -92,6 +94,10 @@ body > *:nth-child(2) {
 }
 
 nav:not(.hidden) #nav-header, nav:not(.hidden) #nav-content {
+  background-color: var(--primary-color);
+}
+
+nav:not(.hidden){
   background-color: var(--primary-color);
 }
 
