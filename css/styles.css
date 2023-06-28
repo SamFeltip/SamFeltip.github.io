@@ -61,8 +61,7 @@ svg {
   fill: currentcolor
 }
 
-a, a *{
-  text-decoration: none;
+main a, main a *{
   color: var(--primary-color);
 
 }
@@ -123,7 +122,7 @@ section .banner{
   background-color: var(--white);
 }
 
-h2 {
+#card-header h2 {
   color: #F00;
 }
 
@@ -157,10 +156,7 @@ footer a{
   flex: 1;
 }
 
-footer * {
-  color: var(--black);
 
-}
 
 .contact-options {
   display: flex;

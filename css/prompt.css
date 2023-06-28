@@ -1,3 +1,64 @@
 :root {
     --primary-color: #3D6CA2;
 }
+
+h2, h3, p {
+    text-align: center;
+
+}
+
+.btn {
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    font-size: large;
+    background-color: #343a40;
+    border-radius: 5px;
+}
+
+.green {
+    color: green !important;
+}
+.red {
+    color: red !important;
+}
+
+.darkorange {
+    color: coral !important;
+}
+
+.purple {
+    color: purple !important;
+}
+
+.blue {
+    color: blue !important;
+}
+
+.amber {
+    color: orange !important;
+}
+.grey {
+    color: gray !important;
+}
+
+.fa-solid {
+    color: var(--text-primary)
+}
+
+i {
+    font-size: 3em;
+}
+
+.col {
+    transition: transform 0.2s ease;
+    margin: 0 1rem;
+}
+
+.col:hover {
+    transform: scale(105%);
+}
+
+.col h2 {
+    margin-bottom: 0;
+}

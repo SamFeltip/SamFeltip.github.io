@@ -1,3 +1,16 @@
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background-color: inherit;
+}
+
+button:hover{
+  background-color: transparent;
+}
+
 body {
   margin: 0;
 }

@@ -1,0 +1,132 @@
+.ufl-timeline {
+    margin: 20px 0;
+    height: 124px;
+}
+
+.ufl-timeline .events ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.ufl-timeline i {
+    font-size: 1.5em;
+}
+
+.ufl-timeline li {
+    list-style-type: none;
+    flex: 1;
+}
+
+.ufl-timeline .status_icon {
+    background: linear-gradient(#000, #000) no-repeat center/100% 2px;
+}
+
+.ufl-timeline .status {
+    background-color: var(--white);
+    transition: 0.5s ease;
+
+}
+
+.ufl-timeline .ufl_icons {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ufl-timeline .status_icon {
+    width: 100%;
+    height: 1.5em;
+}
+
+
+.ufl-timeline .ufl_icons:hover .status {
+    font-size: 0;
+}
+
+.ufl-timeline .button_text {
+    width: 80px;
+}
+
+.ufl-timeline .options {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s ease;
+    width: 0;
+}
+
+.ufl-timeline .option {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s ease;
+}
+
+
+
+.ufl-timeline .ufl_icons:hover .option {
+    opacity: 1;
+}
+
+.ufl-timeline .option i {
+    cursor: pointer;
+
+}
+
+.ufl-timeline .ufl_icons:hover .option:first-child{
+    left: 0;
+}
+
+.ufl-timeline .ufl_icons:hover .option:last-child{
+    left: 100%;
+}
+
+/*!* when 1 item *!*/
+.ufl-timeline .ufl_icons:not(:has(.option:nth-child(2))) .option:first-child {
+    left: 50% !important;
+}
+
+
+/* when 4 items */
+.ufl-timeline .ufl_icons:hover:has(.option:nth-child(4)) .option:nth-child(2){
+    left: 33%;
+}
+.ufl-timeline .ufl_icons:hover:has(.option:nth-child(4)) .option:nth-child(3){
+    left: 67%;
+}
+
+
+
+.ufl-timeline .ufl_icons:hover .options {
+    transform: translateY(-2em);
+    background-color: var(--white);
+    width: 80%;
+    height: 50px;
+}
+
+.reject_prev_button, .reject_all_button {
+    color: red;
+}
+
+.reject_prev_button:hover, .reject_all_button:hover {
+    color: darkred;
+}
+
+.draft_button {
+    color: blue;
+}
+.draft_button:hover {
+    color: darkblue;
+}
+
+.approve_button {
+    color: green;
+}
+
+.approve_button:hover {
+    color: darkslategrey;
+}
