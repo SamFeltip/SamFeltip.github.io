@@ -18,6 +18,8 @@ body.dark-theme {
   --background-color: var(--gray);
   --footer-background: var(--dark-black);
   --background-image-url: url(/img/home/background_image_dark.svg);
+
+  --icon-blue: #c5c5ff;
 }
 
 body.light-theme {
@@ -29,6 +31,8 @@ body.light-theme {
   --background-color: var(--white);
   --footer-background: var(--light-blue);
   --background-image-url: url(/img/home/background_image.svg);
+
+  --icon-blue: blue;
 }
 
 h1, h2, h3, p, li, .button, span, svg {

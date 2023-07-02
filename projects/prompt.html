@@ -256,8 +256,9 @@
         <div class="card-body">
 
           <h2>Accounts</h2>
-
-          <p class="mb-5">Names and contact information is referred from the TUoS CICS login system</p>
+          <p>PROMPT allows students and staff members to share forms</p>
+          <p>Staff members can be Academics or Tutors according to what forms they have responsiblity over</p>
+          <p>Admins are responsible for user and information management</p>
 
           <div class="row">
             <div class="col">
@@ -271,11 +272,6 @@
 
               </i>
               <h2>Academics</h2>
-              <p>
-                Supervisors
-                <br/>
-                Confirmation Review Assessors
-              </p>
             </div>
             <div class="col">
               <i class="span fa-solid fa-user-tie">
@@ -291,6 +287,9 @@
             </div>
 
           </div>
+
+          <p class="mb-5">User info is taken from the TUoS CICS login system, via the username</p>
+
         </div>
 
       </div>
@@ -300,11 +299,7 @@
 
           <h2>Form Status indicators</h2>
           <p class="mt-5">
-            Each student form is given a
-            <b>
-              lateness indicator
-            </b>
-            before it is submitted
+            Students are given a collection of forms according to their <b><a href="#programmes">Study Programme</a></b>. Each form is given a <b>lateness indicator</b> before it is submitted
           </p>
           <div class="row">
             <div class="col">
@@ -348,10 +343,10 @@
             </div>
           </div>
           <p class="mt-5">
-            When a form is submitted, the form is given a
-            <b>
-              submission status indicator
-            </b>
+            When a form is submitted, the form is given a <b>submission status indicator</b>
+          </p>
+          <p>
+            A student's supervisors need to approve forms before they are approved
           </p>
           <div class="row">
             <div class="col">
@@ -425,13 +420,12 @@
 
       </div>
 
-      <div class="card" id="timelines">
+      <div class="card" id="approval_timelines">
         <div class="card-body">
           <h2>Approval Timelines</h2>
-          <p>The form timeline at the bottom of each form shows you the approval status of a form</p>
-          <p>The text in bold shows you which role you play for this form</p>
-          <p>Hover over a circle to act on the form</p>
-
+          <p>After a form is submitted by a student, it is given an approval timeline</p>
+          <p>User's hover over a circle to act on the form</p>
+          <p>Usually primary and secondary Supervisors of a student give initial form approval, but the final approval comes from an admin or a tutor </p>
           <div class="ufl-timeline">
             <div class="events">
               <ul>
@@ -467,21 +461,21 @@
                       <div class="option reject_prev_icon">
                         <button class="reject_prev_button" disabled="disabled" id="supervisor_reject_prev_button" name="staff_reject_prev" type="submit" value="supervisor">
                           <i aria-hidden="true" class="fas fa-reply unsatisfied"></i>
-                          <div class="button_text">reject prev</div>
+                          <span class="button_text">reject prev</span>
                         </button>
                       </div>
 
                       <div class="option draft_icon">
                         <button class="draft_button" disabled="disabled">
                           <i aria-hidden="true" class="fas fa-file satisfied"></i>
-                          <div class="button_text">save draft</div>
+                          <span class="button_text">save draft</span>
                         </button>
                       </div>
 
                       <div class="option approve_icon">
                         <button class="approve_button" disabled="disabled" id="supervisor_forward_button" name="staff_approval" type="submit" value="supervisor">
                           <i aria-hidden="true" class="fas fa-share satisfied"></i>
-                          <div class="button_text">approve forward</div>
+                          <span class="button_text">approve forward</span>
                         </button>
                       </div>
                     </div>
@@ -503,21 +497,21 @@
                       <div class="option reject_all_icon">
                         <button class="reject_all_button" disabled="disabled" id="tutor_reject_all_button" name="staff_reject_all" type="submit" value="tutor">
                           <i aria-hidden="true" class="fas fa-reply-all unsatisfied"></i>
-                          <div class="button_text">reject all</div>
+                          <span class="button_text">reject all</span>
                         </button>
                       </div>
 
                       <div class="option reject_prev_icon">
                         <button class="reject_prev_button" disabled="disabled" id="tutor_reject_prev_button" name="staff_reject_prev" type="submit" value="tutor">
                           <i aria-hidden="true" class="fas fa-reply unsatisfied"></i>
-                          <div class="button_text">reject prev</div>
+                          <span class="button_text">reject prev</span>
                         </button>
                       </div>
 
                       <div class="option draft_icon">
                         <button class="draft_button" disabled="disabled">
                           <i aria-hidden="true" class="fas fa-file satisfied"></i>
-                          <div class="button_text">save draft</div>
+                          <span class="button_text">save draft</span>
                         </button>
                       </div>
 
@@ -525,7 +519,7 @@
                       <div class="option approve_icon">
                         <button class="approve_button" disabled="disabled" id="tutor_forward_button" name="staff_approval" type="submit" value="tutor">
                           <i aria-hidden="true" class="fas fa-flag-checkered satisfied"></i>
-                          <div class="button_text">approve</div>
+                          <span class="button_text">approve</span>
                         </button>
                       </div>
                     </div>
@@ -642,9 +636,9 @@
                 Revoke Approval
               </h2>
               <p>
-                Admins can revoke all form approval
-                <br/>
-                This resets form approval, but keeps inputs into the form
+                Admins can revoke all form approval, to reset the form progression.
+                <br>
+                User input is saved
               </p>
             </div>
           </div>
@@ -654,10 +648,11 @@
 
       </div>
 
-      <div class="card">
+      <div class="card" id="timelines">
+
         <div class="card-body">
           <h2>Timelines and Notifications</h2>
-          <p>Timelines are collections of forms, and they can be associated with many study programmes</p>
+          <p>Timelines are collections of forms, and they describe the process needed to complete a study programme</p>
           <br/>
           <h3>The following are variables which can be set for each form on a timeline</h3>
           <br/>
@@ -682,16 +677,12 @@
               </p>
             </div>
             <div class="col">
-              <i class="span fa-solid fa-comment">
-
-              </i>
+              <i class="span fa-solid fa-comment"></i>
               <h3>Reminders from</h3>
               <p>Decides how many weeks before deadline the student is notified</p>
             </div>
             <div class="col">
-              <div class="span fa-solid fa-clock">
-
-              </div>
+              <i class="span fa-solid fa-clock"></i>
               <h3>Reminder Frequency</h3>
               <p>The student will be notified to submit the form frequently</p>
             </div>
@@ -700,7 +691,7 @@
             <p>
               Students can be manually notified by admins to fill in forms
               <br/>
-              This is done in the student view with the <i class="fa-solid fa-comment"></i>
+              This is done in the student view with the <i class="fa-sm fa-solid fa-comment"></i>
               icon
             </p>
           </div>
@@ -713,9 +704,8 @@
             Study programmes
           </h2>
 
-          <p>The base time limit of a study programme dictates the end of a students course</p>
-          <p>the "use default time limit" button implies the study programme's base time limit decides when a student graduates</p>
-          <p>When a student moves study programmes, their time limit is changed appropriately, but there is a manual override in the student edit view if needed</p>
+          <p>Students have study programmes, which decide the time spent studying and the nature of a students study period</p>
+          <p>When a student moves study programmes, their time limit (amount of time before graduation) is changed appropriately</p>
 
         </div>
       </div>
@@ -725,8 +715,8 @@
           <h2>
             Research Groups
           </h2>
-          <p>Research groups infer the primary department of a staff member</p>
-          <p>A staff member with the tutor rank can only act as a tutor on forms which are assigned to their primary department</p>
+          <p>Research groups are collections of users, typically doing on same or similar study programmes.</p>
+          <p>Tutors can give final approval of forms within the department of their Research Group</p>
         </div>
       </div>
 
@@ -735,11 +725,9 @@
           <h2>
             Departments
           </h2>
-          <p>Staff can be associated with many departments. This is done on the /myaccount view, or the staff view</p>
+          <p>Staff can be associated with many departments. Their primary department is according to their Research Group</p>
           <p>
-            <b>It is extremely important forms, timelines, study programmes and research groups are assigned a department</b>
-            <br/>
-            If this is not done, these items may not be visible to the correct users
+            Forms, timelines, study programmes and research groups are also assigned a department. This information helps academics filter information on the site
           </p>
         </div>
       </div>

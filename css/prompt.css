@@ -32,7 +32,7 @@ h2, h3, p {
 }
 
 .blue {
-    color: blue !important;
+    color: var(--icon-blue) !important;
 }
 
 .amber {

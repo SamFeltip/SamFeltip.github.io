@@ -45,7 +45,8 @@
 }
 
 .ufl-timeline .button_text {
-    width: 80px;
+    width: 60px;
+    display: block;
 }
 
 .ufl-timeline .options {
@@ -112,21 +113,21 @@
     color: red;
 }
 
-.reject_prev_button:hover, .reject_all_button:hover {
-    color: darkred;
+.reject_prev_button:hover, .reject_all_button:hover, .draft_button:hover, .approve_button:hover {
+    filter: brightness(70%);
 }
 
 .draft_button {
-    color: blue;
+    color: var(--icon-blue);
 }
-.draft_button:hover {
-    color: darkblue;
-}
+/*.draft_button:hover {*/
+/*    color: darkblue;*/
+/*}*/
 
 .approve_button {
     color: green;
 }
 
-.approve_button:hover {
+ {
     color: darkslategrey;
 }
