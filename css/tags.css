@@ -25,11 +25,8 @@
 }
 
 .tags-primary, .tags-secondary {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     gap: 10px;
-    flex-wrap: wrap
 }
 
 .tags-primary .tag {
