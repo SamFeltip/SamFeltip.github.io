@@ -9,7 +9,6 @@ carousels.forEach(carousel => {carousel.style.setProperty('--position-state', 0)
 function change_carousel_display(carousel, current_carousel_state, new_carousel_state){
 
     // get carousel parent
-
     let imgs = carousel.querySelectorAll('img');
     let descriptions = carousel.querySelectorAll('.carousel-description');
 
@@ -29,11 +28,16 @@ function change_carousel_display(carousel, current_carousel_state, new_carousel_
     carousel_bullets[new_carousel_state].classList.add('filled');
 }
 
+
 carousel_next_options.forEach( (carousel_next_option) => {
     carousel_next_option.addEventListener("click", event => {
+
         let carousel = carousel_next_option.closest('.carousel');
-        let current_carousel_state = carousel.style.getPropertyValue('--position-state')
-        let new_carousel_state = (current_carousel_state + 1) % 3;
+
+        let num_of_images = carousel.querySelectorAll(".carousel-bullet").length
+
+        let current_carousel_state = parseInt(carousel.style.getPropertyValue('--position-state'))
+        let new_carousel_state = (current_carousel_state + 1) % num_of_images;
 
         change_carousel_display(carousel, current_carousel_state, new_carousel_state)
 
@@ -46,7 +50,10 @@ carousel_prev_options.forEach( (carousel_prev_option) => {
         let carousel = carousel_prev_option.closest('.carousel');
         let current_carousel_state = parseInt(carousel.style.getPropertyValue('--position-state'));
 
-        let new_carousel_state = current_carousel_state === 0 ? 2 : current_carousel_state - 1;
+        let num_of_images = carousel.querySelectorAll(".carousel-bullet").length
+
+
+        let new_carousel_state = current_carousel_state === 0 ? (num_of_images-1) : current_carousel_state - 1;
 
 
         change_carousel_display(carousel, current_carousel_state, new_carousel_state)
