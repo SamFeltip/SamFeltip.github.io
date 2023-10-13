@@ -5,6 +5,13 @@
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/WebGames/Atari breakout" />
+      <excludeFolder url="file://$MODULE_DIR$/WebGames/Connect4" />
+      <excludeFolder url="file://$MODULE_DIR$/WebGames/Flappy bird" />
+      <excludeFolder url="file://$MODULE_DIR$/WebGames/Libraries" />
+      <excludeFolder url="file://$MODULE_DIR$/WebGames/Multiplayer Snake" />
+      <excludeFolder url="file://$MODULE_DIR$/img/WebGames/AtariBreakout" />
+      <excludeFolder url="file://$MODULE_DIR$/img/WebGames/MultiplayerSnake" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
