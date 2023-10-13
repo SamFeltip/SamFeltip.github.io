@@ -1,0 +1,16 @@
+.three-columns{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 10px
+}
+
+.three-columns img {
+    border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+    .three-columns {
+        flex-direction: column;
+    }
+}
